@@ -1,0 +1,18 @@
+[
+  {
+    "id": "DEMO-001",
+    "video_id": "videos/demo_short",
+    "duration": 2.0,
+    "question": "What type of media is shown in the input?\nA. A still image\nB. A video clip\nC. An audio-only file\nD. A text document",
+    "answer": "B",
+    "question_type": "basic_understanding"
+  },
+  {
+    "id": "DEMO-002",
+    "video_id": "videos/demo_short",
+    "duration": 2.0,
+    "question": "Which answer format should the model return?\nA. Only the option letter\nB. A full essay\nC. Python code\nD. A file path",
+    "answer": "A",
+    "question_type": "basic_understanding"
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "videos": {
+    "demo_video_001": {
+      "file_path": "videos/demo_short.mp4",
+      "dataset_name": "demo",
+      "mcq": {
+        "video_qa": {
+          "basic_understanding": [
+            {
+              "qa_id": "DEMO-001",
+              "question": "What type of media is shown in the input?",
+              "options": {
+                "A": "A still image",
+                "B": "A video clip",
+                "C": "An audio-only file",
+                "D": "A text document"
+              },
+              "correct_answer": "B",
+              "reasoning": "The input is provided as a video file."
+            },
+            {
+              "qa_id": "DEMO-002",
+              "question": "Which answer format should the model return?",
+              "options": {
+                "A": "Only the option letter",
+                "B": "A full essay",
+                "C": "Python code",
+                "D": "A file path"
+              },
+              "correct_answer": "A",
+              "reasoning": "The evaluation prompt asks for the option letter."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

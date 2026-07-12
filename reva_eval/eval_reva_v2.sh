@@ -1,0 +1,80 @@
+#!/bin/bash
+# Evaluate Qwen-VL models on ReVA_V2 test_set.json.
+
+set -e
+cd "$(dirname "$0")"
+
+PROJECT_ROOT="$(cd .. && pwd)"
+CONDA_ENV=${CONDA_ENV:-"verl"}
+MODEL_PATH=${MODEL_PATH:-"Qwen/Qwen3-VL-4B-Instruct"}
+MODEL_BASE=${MODEL_BASE:-""}
+REVA_ROOT=${REVA_ROOT:-"$PROJECT_ROOT/data/reva_test"}
+REVA_JSON=${REVA_JSON:-"$REVA_ROOT/test_set.json"}
+NUM_CHUNKS=${NUM_CHUNKS:-1}
+MAX_FRAMES=${MAX_FRAMES:-32}
+MAX_PIXELS=${MAX_PIXELS:-$((224*224))}
+GPU_MEM_UTIL=${GPU_MEM_UTIL:-0.9}
+MAX_MODEL_LEN=${MAX_MODEL_LEN:-16384}
+BACKEND=${BACKEND:-transformers}
+OUTPUT_DIR=${OUTPUT_DIR:-"$PROJECT_ROOT/outputs"}
+EVAL_NAME=${EVAL_NAME:-"reva_v2_test"}
+GT_FILE=${GT_FILE:-"data/rsvidqa/reva_v2_test_set.json"}
+
+echo "=== ReVA_V2 test Evaluation ==="
+echo "Model:      $MODEL_PATH"
+echo "ReVA root:  $REVA_ROOT"
+echo "ReVA json:  $REVA_JSON"
+echo "GPU chunks: $NUM_CHUNKS"
+echo "Max frames: $MAX_FRAMES"
+echo "Backend:    $BACKEND"
+
+echo ""
+echo "--- Step 1: Preparing test set ---"
+REVA_ROOT="$REVA_ROOT" REVA_JSON="$REVA_JSON" conda run -n "$CONDA_ENV" python3 data/rsvidqa/prepare_reva_v2_test_set.py
+
+echo ""
+echo "--- Step 2: Running inference ---"
+
+export MY_PROMPT_TEMPLATE="This is a video with duration {duration} seconds.
+Please carefully watch the video and answer the multiple-choice question below.
+Think step-by-step within <think> </think> tags, then provide only the letter of the correct option within <answer> </answer> tags.
+Question: {input_text}"
+
+OUT_CHUNK_DIR="$OUTPUT_DIR/$EVAL_NAME/$EVAL_NAME"
+mkdir -p "$OUT_CHUNK_DIR"
+
+pids=()
+for idx in $(seq 0 $((NUM_CHUNKS - 1))); do
+    extra_args=()
+    if [ -n "$MODEL_BASE" ]; then
+        extra_args+=(--model-base "$MODEL_BASE")
+    fi
+    CUDA_VISIBLE_DEVICES=$idx conda run -n "$CONDA_ENV" python3 inference_vllm_origin_number.py \
+        --model-path "$MODEL_PATH" \
+        "${extra_args[@]}" \
+        --video_dir "$REVA_ROOT" \
+        --gt_file "$GT_FILE" \
+        --output_dir "$OUT_CHUNK_DIR" \
+        --output_name "pred" \
+        --num-chunks "$NUM_CHUNKS" \
+        --chunk-idx "$idx" \
+        --max_pixels "$MAX_PIXELS" \
+        --max_frames "$MAX_FRAMES" \
+        --gpu_memory_utilization "$GPU_MEM_UTIL" \
+        --max_model_len "$MAX_MODEL_LEN" \
+        --backend "$BACKEND" &
+    pids+=($!)
+done
+
+for pid in "${pids[@]}"; do
+    wait "$pid" || { echo "Inference process $pid failed"; exit 1; }
+done
+
+echo ""
+echo "--- Step 3: Computing accuracy ---"
+conda run -n "$CONDA_ENV" python3 "$PROJECT_ROOT/scripts/score_reva_predictions.py" \
+    --output-dir "$OUT_CHUNK_DIR" \
+    --gt-file "$GT_FILE"
+
+echo ""
+echo "=== Done ==="
