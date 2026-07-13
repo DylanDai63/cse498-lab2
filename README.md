@@ -195,5 +195,3 @@ For a student assignment, keep the required workflow to:
 4. Fine-tune Qwen on a small Qwen-format training set.
 5. Run ReVA evaluation on the fine-tuned Qwen checkpoint.
 6. Compare Qwen baseline, VILA baseline, and fine-tuned Qwen, then analyze several success and failure cases.
-
-Do not include the original multi-dataset RL/DGRPO training scripts in the student-facing path unless the course explicitly needs advanced reinforcement learning.
