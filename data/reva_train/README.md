@@ -1,5 +1,14 @@
 # ReVA Training Annotations
 
+The official dataset is available at [ReVA-Benchmark/ReVA](https://huggingface.co/datasets/ReVA-Benchmark/ReVA). Download it with:
+
+```bash
+export REVA_DATA_ROOT=/path/to/ReVA
+hf download ReVA-Benchmark/ReVA --repo-type dataset --local-dir "$REVA_DATA_ROOT"
+```
+
+The downloaded root contains `train_set.json` and the video directories referenced by each annotation `file_path`. Preserve that directory structure.
+
 Place ReVA training annotations here:
 
 ```text

@@ -33,7 +33,8 @@ data/reva_test/test_set.json
 
 ## Teacher Preparation Checklist
 
-- Put the chosen Qwen checkpoint on the teaching server.
+- Download the official ReVA dataset from [ReVA-Benchmark/ReVA](https://huggingface.co/datasets/ReVA-Benchmark/ReVA).
+- Download the Qwen checkpoint from [Qwen/Qwen3-VL-4B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct), or pre-populate the shared Hugging Face cache.
 - Put a small training set in `data/qwen_train/train.json`.
 - Put matching training videos under `data/qwen_train/videos/`.
 - Put ReVA `test_set.json` under `data/reva_test/test_set.json`.

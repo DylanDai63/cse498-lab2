@@ -17,6 +17,23 @@ The teacher reference implementation is in:
 
 Do not edit the teacher reference directory.
 
+## Required Downloads
+
+- ReVA dataset: [ReVA-Benchmark/ReVA](https://huggingface.co/datasets/ReVA-Benchmark/ReVA)
+- Qwen3-VL-4B-Instruct weights: [Qwen/Qwen3-VL-4B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct)
+
+The instructor may provide these resources on the teaching server. Otherwise, download them with the Hugging Face CLI:
+
+```bash
+export REVA_DATA_ROOT=/path/to/ReVA
+export QWEN3_VL_MODEL_PATH=/path/to/Qwen3-VL-4B-Instruct
+
+hf download ReVA-Benchmark/ReVA --repo-type dataset --local-dir "$REVA_DATA_ROOT"
+hf download Qwen/Qwen3-VL-4B-Instruct --local-dir "$QWEN3_VL_MODEL_PATH"
+```
+
+The ReVA download is about 29.9 GB. Keep its internal directory structure unchanged because annotation `file_path` values are relative to the downloaded ReVA root.
+
 ## Part 1: Convert ReVA Annotations to Qwen Training Data
 
 File: `scripts/build_qwen_train_data.py`

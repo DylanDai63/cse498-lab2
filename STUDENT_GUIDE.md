@@ -17,6 +17,23 @@ cd ~/code/CSE_Homeworks/qwen_reva_assignment
 
 If your directory is different, use that path instead.
 
+## Official Resources
+
+- ReVA dataset: [ReVA-Benchmark/ReVA](https://huggingface.co/datasets/ReVA-Benchmark/ReVA)
+- Qwen base model: [Qwen/Qwen3-VL-4B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct)
+
+Your instructor may have already downloaded both resources to the teaching server. Otherwise, use:
+
+```bash
+export REVA_DATA_ROOT=/path/to/ReVA
+export QWEN3_VL_MODEL_PATH=/path/to/Qwen3-VL-4B-Instruct
+
+hf download ReVA-Benchmark/ReVA --repo-type dataset --local-dir "$REVA_DATA_ROOT"
+hf download Qwen/Qwen3-VL-4B-Instruct --local-dir "$QWEN3_VL_MODEL_PATH"
+```
+
+The full ReVA download is about 29.9 GB. Do not flatten or rename its video directories: paths in the annotation files are relative to the ReVA root.
+
 ## 0. Check Setup
 
 ```bash

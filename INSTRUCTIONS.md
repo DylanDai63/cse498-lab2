@@ -8,6 +8,29 @@ export PATH=<CONDA_ROOT>/bin:$PATH
 export MODEL_PATH=<QWEN3_VL_MODEL_PATH>
 ```
 
+## 0. Download Official Resources
+
+- ReVA dataset: [ReVA-Benchmark/ReVA](https://huggingface.co/datasets/ReVA-Benchmark/ReVA)
+- Qwen model weights: [Qwen/Qwen3-VL-4B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct)
+
+If the instructor has not already placed them on the server, download them with:
+
+```bash
+python3 -m pip install -U huggingface_hub
+
+export REVA_DATA_ROOT=/path/to/ReVA
+export QWEN3_VL_MODEL_PATH=/path/to/Qwen3-VL-4B-Instruct
+
+hf download ReVA-Benchmark/ReVA \
+  --repo-type dataset \
+  --local-dir "$REVA_DATA_ROOT"
+
+hf download Qwen/Qwen3-VL-4B-Instruct \
+  --local-dir "$QWEN3_VL_MODEL_PATH"
+```
+
+The ReVA download is about 29.9 GB and must retain its original directory structure. Alternatively, set `MODEL_PATH=Qwen/Qwen3-VL-4B-Instruct` to let Transformers download and cache the model automatically.
+
 ## 1. Prepare Demo Data
 
 The bundled project contains one demo video. This command creates a tiny ReVA-style train/test split so the full workflow can run before the full ReVA videos are available.

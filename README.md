@@ -24,6 +24,35 @@ INSTRUCTIONS.md
 
 The guides walk through setup checks, base-model evaluation, Qwen fine-tuning, fine-tuned evaluation, VILA baseline evaluation, and metric comparison.
 
+## Official Resources
+
+- ReVA dataset: [ReVA-Benchmark/ReVA](https://huggingface.co/datasets/ReVA-Benchmark/ReVA)
+- Qwen base model: [Qwen/Qwen3-VL-4B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct)
+
+The ReVA repository contains `train_set.json`, `valid_set.json`, `test_set.json`, and the corresponding video directories. The complete dataset is about 29.9 GB, so make sure the target disk has enough free space before downloading it.
+
+Install the Hugging Face CLI and download both resources with:
+
+```bash
+python3 -m pip install -U huggingface_hub
+
+export REVA_DATA_ROOT=/path/to/ReVA
+export QWEN3_VL_MODEL_PATH=/path/to/Qwen3-VL-4B-Instruct
+
+hf download ReVA-Benchmark/ReVA \
+  --repo-type dataset \
+  --local-dir "$REVA_DATA_ROOT"
+
+hf download Qwen/Qwen3-VL-4B-Instruct \
+  --local-dir "$QWEN3_VL_MODEL_PATH"
+```
+
+If the server can access Hugging Face during execution, the model can also be loaded directly through its repository ID:
+
+```bash
+export MODEL_PATH=Qwen/Qwen3-VL-4B-Instruct
+```
+
 ## 1. Prepare Data
 
 Start from ReVA training annotations:

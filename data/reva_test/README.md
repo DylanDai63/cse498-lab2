@@ -1,5 +1,14 @@
 # ReVA Test Data
 
+The official dataset is available at [ReVA-Benchmark/ReVA](https://huggingface.co/datasets/ReVA-Benchmark/ReVA). Download it with:
+
+```bash
+export REVA_DATA_ROOT=/path/to/ReVA
+hf download ReVA-Benchmark/ReVA --repo-type dataset --local-dir "$REVA_DATA_ROOT"
+```
+
+The downloaded root contains `test_set.json` and the corresponding video directories. Keep all paths relative to the ReVA root unchanged.
+
 Place the ReVA evaluation subset here:
 
 ```text
