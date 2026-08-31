@@ -5,30 +5,30 @@
       "dataset_name": "demo",
       "mcq": {
         "video_qa": {
-          "basic_understanding": [
+          "visual_text_understanding": [
             {
-              "qa_id": "DEMO-001",
-              "question": "What type of media is shown in the input?",
+              "qa_id": "DEMO-TEST-001",
+              "question": "Which road name is displayed on the title card?",
               "options": {
-                "A": "A still image",
-                "B": "A video clip",
-                "C": "An audio-only file",
-                "D": "A text document"
+                "A": "Oxford Road",
+                "B": "London Road",
+                "C": "Worcester Road",
+                "D": "Station Road"
               },
-              "correct_answer": "B",
-              "reasoning": "The input is provided as a video file."
+              "correct_answer": "C",
+              "reasoning": "The address text includes 'Worcester Road'."
             },
             {
-              "qa_id": "DEMO-002",
-              "question": "Which answer format should the model return?",
+              "qa_id": "DEMO-TEST-002",
+              "question": "Which full service description appears below the main title?",
               "options": {
-                "A": "Only the option letter",
-                "B": "A full essay",
-                "C": "Python code",
-                "D": "A file path"
+                "A": "Premier Hand Car Wash",
+                "B": "Express Laundry Service",
+                "C": "Automatic Fuel Station",
+                "D": "Budget Bicycle Repair"
               },
               "correct_answer": "A",
-              "reasoning": "The evaluation prompt asks for the option letter."
+              "reasoning": "The smaller text below the title reads 'Premier Hand Car Wash'."
             }
           ]
         }

@@ -71,6 +71,8 @@ The output is:
 data/qwen_train/train.json
 ```
 
+The preparation script checks video references by default and preserves the existing output if no referenced video can be found. A zero-sample result therefore indicates an incorrect dataset path, not a usable training set.
+
 Each sample has a video path plus a two-turn conversation:
 
 ```json
@@ -104,7 +106,7 @@ outputs/qwen_base/qwen_base/result.csv
 outputs/qwen_base/qwen_base/result.json
 ```
 
-`result.csv` contains total accuracy and subcategory accuracies.
+`result.csv` contains completion, total accuracy, and subcategory accuracies. Missing or unparsable predictions count as incorrect instead of disappearing from the denominator.
 
 ## 3. Fine-Tune Qwen
 
@@ -141,11 +143,11 @@ EPOCHS=1 SAVE_STEPS=20 bash scripts/run_finetune_qwen.sh
 Point `MODEL_PATH` to the checkpoint produced by fine-tuning:
 
 ```bash
-MODEL_PATH=outputs/qwen_reva_sft/checkpoint-1000 \
+MODEL_PATH=outputs/qwen_reva_sft/checkpoint-2 \
 bash scripts/run_eval_qwen_finetuned.sh
 ```
 
-If your checkpoint number is different, replace `checkpoint-1000` with the actual checkpoint directory.
+`checkpoint-2` is the expected smoke-test example for the bundled two-sample training split. If your run saves a different checkpoint number, replace it with the actual checkpoint directory.
 
 The main outputs are:
 
@@ -197,6 +199,8 @@ The table compares:
 - Qwen base
 - Qwen fine-tuned
 - VILA base
+
+Qwen and VILA must be compared on the same question set. Check both `num_questions` and `num_answered`; do not report accuracy alone.
 
 For the exact runnable server commands on `<REMOTE_HOST>`, see:
 

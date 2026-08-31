@@ -8,6 +8,8 @@ export PATH=<CONDA_ROOT>/bin:$PATH
 export MODEL_PATH=<QWEN3_VL_MODEL_PATH>
 ```
 
+The prepared teaching environment is named `qwen2` for historical reasons, but this assignment consistently uses the Qwen3-VL-4B-Instruct model.
+
 ## 0. Download Official Resources
 
 - ReVA dataset: [ReVA-Benchmark/ReVA](https://huggingface.co/datasets/ReVA-Benchmark/ReVA)
@@ -33,7 +35,7 @@ The ReVA download is about 29.9 GB and must retain its original directory struct
 
 ## 1. Prepare Demo Data
 
-The bundled project contains one demo video. This command creates a tiny ReVA-style train/test split so the full workflow can run before the full ReVA videos are available.
+The bundled project contains one demo video. This command creates distinct training and test questions that require reading different text from the video title card, so the full workflow can run before the complete ReVA videos are available.
 
 ```bash
 bash scripts/setup_demo_data.sh
@@ -56,6 +58,10 @@ Outputs:
 outputs/qwen_base/qwen_base/result.csv
 outputs/qwen_base/qwen_base/result.json
 ```
+
+The Qwen result reports `Completed` separately from `Total` accuracy. Missing predictions remain in the accuracy denominator.
+
+For another fresh baseline run, choose a new output identity, for example `EVAL_NAME=qwen_base_run2`. Use `RESUME=1` only to continue the exact same model and evaluation configuration; mismatched resumes are rejected.
 
 ## 3. Qwen Fine-Tuning
 
@@ -143,7 +149,7 @@ cat outputs/model_comparison.csv
 
 ## 7. Full ReVA Data
 
-The demo flow is only for checking that code, environments, and commands work. For the real assignment, replace:
+The demo training and test questions are distinct, but they still use one short video and are only for checking that code, environments, and commands work. Demo metrics are not valid assignment results. For the real assignment, replace:
 
 ```text
 data/reva_test/test_set.json

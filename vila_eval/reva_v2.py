@@ -7,9 +7,6 @@ from pathlib import Path
 from time import strftime
 from typing import Any
 
-from tqdm import tqdm
-
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--model-path", type=str, required=True)
@@ -31,7 +28,8 @@ def parse_args() -> argparse.Namespace:
 
 def load_instances(question_file: str) -> list[dict[str, Any]]:
     """Flatten nested ReVA annotations into VILA evaluation instances."""
-    # TODO(student): read question_file and return flat instances.
+    # TODO(student): read question_file, flatten instances, and assign stable IDs
+    # using qa_id, then global_index, then video/subcategory/question index.
     raise NotImplementedError("TODO: implement load_instances")
 
 
@@ -88,6 +86,8 @@ def summarize(records: list[dict]) -> dict:
 
 def main() -> None:
     args = parse_args()
+
+    from tqdm import tqdm
 
     if args.gpu is not None:
         os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu

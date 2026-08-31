@@ -39,12 +39,21 @@ data/reva_test/test_set.json
 - Put matching training videos under `data/qwen_train/videos/`.
 - Put ReVA `test_set.json` under `data/reva_test/test_set.json`.
 - Put ReVA videos or extracted frame folders under `data/reva_test/`.
-- Confirm the `verl` conda environment can run vLLM inference.
+- Confirm the `qwen2` conda environment can run Qwen3-VL Transformers inference and training. The environment name is historical and does not indicate the model version.
 - Confirm the `vila` conda environment can run VILA inference.
 - Confirm `VILA_REPO` points to a working VILA checkout, such as `<VILA_REPO>`.
 - Run baseline ReVA evaluation once and save reference output.
 - Run VILA ReVA evaluation once and save reference output.
 - Run one short fine-tuning job and save expected metric range.
+
+Before publishing a release, validate the answer checkout with the exact public student tests:
+
+```bash
+ASSIGNMENT_PROJECT_ROOT=<ANSWER_PROJECT_ROOT> \
+  <QWEN_ENV_PYTHON> -m pytest -q tests/test_student_todos.py
+```
+
+This prevents the student and answer repositories from drifting to different helper-function contracts.
 
 ## Suggested Assignment Tasks
 
@@ -53,17 +62,17 @@ data/reva_test/test_set.json
 Students run:
 
 ```bash
-MODEL_PATH=/path/to/Qwen2.5-VL-7B-Instruct bash scripts/run_eval_qwen_base.sh
+MODEL_PATH=/path/to/Qwen3-VL-4B-Instruct bash scripts/run_eval_qwen_base.sh
 ```
 
-They report total accuracy and two subcategory accuracies from `result.csv`.
+They report completion, total accuracy, and two subcategory accuracies from `result.csv`.
 
 ### Task 2: Fine-Tuning
 
 Students inspect `data/qwen_train/train.json`, then run:
 
 ```bash
-MODEL_PATH=/path/to/Qwen2.5-VL-7B-Instruct bash scripts/run_finetune_qwen.sh
+MODEL_PATH=/path/to/Qwen3-VL-4B-Instruct bash scripts/run_finetune_qwen.sh
 ```
 
 They submit the training command, changed hyperparameters, and final checkpoint path.

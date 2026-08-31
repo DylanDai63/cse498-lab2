@@ -35,8 +35,9 @@ def load_predictions(output_dir: Path) -> dict[str, dict[str, Any]]:
 
 
 def score_predictions(preds: dict[str, dict[str, Any]], gt_list: list[dict[str, Any]]) -> tuple[dict, str]:
-    """Compute per-example correctness plus total/subcategory accuracy table."""
-    # TODO(student): build gt dict, compare parsed letters, aggregate total and question_type stats.
+    """Score every GT item and report completion separately from accuracy."""
+    # TODO(student): compare predictions against every GT item, count missing predictions
+    # as incorrect, and report Completed plus Total/subcategory accuracy statistics.
     raise NotImplementedError("TODO: implement score_predictions")
 
 

@@ -58,6 +58,8 @@ scripts/score_reva_predictions.py
 
 Complete path normalization, QA flattening, answer extraction, letter parsing, prediction loading, and accuracy computation.
 
+Your scorer must report completion separately from accuracy. Accuracy is computed over every prepared GT item; a missing or unparsable prediction counts as incorrect.
+
 Test:
 
 ```bash
@@ -113,3 +115,5 @@ cd <STUDENT_PROJECT_ROOT>
 At the beginning of the assignment these tests are expected to fail with `NotImplementedError`, because the `TODO(student)` functions are blank. After you complete the TODOs, all unit tests should pass before you run the Qwen/VILA GPU workflows.
 
 These tests use tiny in-memory examples and do not load Qwen or VILA. They verify the expected input/output behavior of each TODO function.
+
+The tests include missing predictions, verbose model responses containing distractor letters, stable fallback QA IDs, and option-text parsing. Do not optimize only for single-letter demo outputs.

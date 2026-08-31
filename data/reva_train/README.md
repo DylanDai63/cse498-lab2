@@ -21,6 +21,8 @@ Generate Qwen-format training data with:
 bash scripts/prepare_qwen_train_data.sh
 ```
 
+The script requires referenced videos to exist by default and will not overwrite the current training JSON when no valid samples are found.
+
 By default this creates a small 200-sample subset at:
 
 ```text

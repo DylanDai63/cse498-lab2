@@ -6,16 +6,32 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 from pathlib import Path
 
 
+def parse_summary_line(lines: list[str], label: str) -> tuple[int, int, float] | None:
+    pattern = re.compile(rf"^{re.escape(label)}:\s*(\d+)\s*/\s*(\d+)\s*=\s*([0-9.]+)%$")
+    for line in lines:
+        match = pattern.match(line.strip())
+        if match:
+            numerator, denominator, percentage = match.groups()
+            return int(numerator), int(denominator), float(percentage) / 100.0
+    return None
+
+
 def read_qwen_csv(path: Path) -> dict:
-    text = path.read_text(encoding="utf-8").splitlines()
-    total_line = next((line for line in text if line.startswith("Total:")), "")
-    accuracy = None
-    if "=" in total_line and "%" in total_line:
-        accuracy = float(total_line.split("=")[-1].strip().rstrip("%")) / 100.0
-    return {"accuracy": accuracy, "source": str(path)}
+    lines = path.read_text(encoding="utf-8").splitlines()
+    total = parse_summary_line(lines, "Total")
+    completed = parse_summary_line(lines, "Completed")
+    num_questions = total[1] if total else None
+    num_answered = completed[0] if completed else num_questions
+    return {
+        "accuracy": total[2] if total else None,
+        "num_questions": num_questions,
+        "num_answered": num_answered,
+        "source": str(path),
+    }
 
 
 def read_vila_metrics(path: Path) -> dict:
@@ -74,13 +90,13 @@ def main() -> None:
 
     if qwen_base_path.exists():
         metrics = read_qwen_csv(qwen_base_path)
-        rows.append({"model": "Qwen base", "accuracy": metrics["accuracy"], "source": metrics["source"]})
+        rows.append({"model": "Qwen base", **metrics})
     else:
         rows.append({"model": "Qwen base", "accuracy": None, "source": f"missing: {qwen_base_path}"})
 
     if args.qwen_finetuned.exists():
         metrics = read_qwen_csv(args.qwen_finetuned)
-        rows.append({"model": "Qwen fine-tuned", "accuracy": metrics["accuracy"], "source": metrics["source"]})
+        rows.append({"model": "Qwen fine-tuned", **metrics})
     else:
         rows.append({"model": "Qwen fine-tuned", "accuracy": None, "source": f"missing: {args.qwen_finetuned}"})
 

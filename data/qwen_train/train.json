@@ -4,7 +4,7 @@
     "conversations": [
       {
         "from": "human",
-        "value": "<video>\nPlease carefully watch the video and answer the multiple-choice question below.\nThink step-by-step within <think> </think> tags, then provide only the letter of the correct option within <answer> </answer> tags.\nQuestion: What type of media is shown in the input?\nA. A still image\nB. A video clip\nC. An audio-only file\nD. A text document"
+        "value": "<video>\nPlease carefully watch the video and answer the multiple-choice question below.\nThink step-by-step within <think> </think> tags, then provide only the letter of the correct option within <answer> </answer> tags.\nQuestion: What type of business is advertised in the video title?\nA. A grocery store\nB. A hand car wash\nC. A railway station\nD. A hotel"
       },
       {
         "from": "gpt",
@@ -12,9 +12,9 @@
       }
     ],
     "metadata": {
-      "qa_id": "DEMO-001",
+      "qa_id": "DEMO-TRAIN-001",
       "video_id": "demo_video_001",
-      "question_type": "basic_understanding",
+      "question_type": "visual_text_understanding",
       "category": "video_qa",
       "correct_answer": "B"
     }
@@ -24,19 +24,19 @@
     "conversations": [
       {
         "from": "human",
-        "value": "<video>\nPlease carefully watch the video and answer the multiple-choice question below.\nThink step-by-step within <think> </think> tags, then provide only the letter of the correct option within <answer> </answer> tags.\nQuestion: Which answer format should the model return?\nA. Only the option letter\nB. A full essay\nC. Python code\nD. A file path"
+        "value": "<video>\nPlease carefully watch the video and answer the multiple-choice question below.\nThink step-by-step within <think> </think> tags, then provide only the letter of the correct option within <answer> </answer> tags.\nQuestion: Which place name appears in the largest line of text?\nA. Oxford\nB. London\nC. Birmingham\nD. Bromsgrove"
       },
       {
         "from": "gpt",
-        "value": "<answer>A</answer>"
+        "value": "<answer>D</answer>"
       }
     ],
     "metadata": {
-      "qa_id": "DEMO-002",
+      "qa_id": "DEMO-TRAIN-002",
       "video_id": "demo_video_001",
-      "question_type": "basic_understanding",
+      "question_type": "visual_text_understanding",
       "category": "video_qa",
-      "correct_answer": "A"
+      "correct_answer": "D"
     }
   }
 ]

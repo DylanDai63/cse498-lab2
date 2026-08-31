@@ -2,10 +2,11 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 import sys
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(os.environ.get("ASSIGNMENT_PROJECT_ROOT", Path(__file__).resolve().parents[1]))
 
 
 def load_module(name: str, relative_path: str):
@@ -143,6 +144,9 @@ def test_score_reva_predictions(tmp_path):
     assert mod.extract_answer("Answer: C") == "Answer: C"
     assert mod.extract_letter("<answer>b</answer>") == "B"
     assert mod.extract_letter("The answer is C because...") == "C"
+    assert mod.extract_letter("<think>A and B are distractors.</think><answer>d</answer>") == "D"
+    assert mod.extract_letter("Final answer: C") == "C"
+    assert mod.extract_letter("The model cannot determine the option.") == ""
 
     out_dir = tmp_path / "preds"
     out_dir.mkdir()
@@ -160,12 +164,17 @@ def test_score_reva_predictions(tmp_path):
     gt_list = [
         {"id": "Q1", "answer": "B", "question_type": "basic"},
         {"id": "Q2", "answer": "C", "question_type": "basic"},
+        {"id": "Q3", "answer": "D", "question_type": "temporal"},
     ]
     results, csv_text = mod.score_predictions(preds, gt_list)
     assert results["Q1"]["acc"] == 1
     assert results["Q2"]["acc"] == 0
-    assert "Total: 1/2 = 50.00%" in csv_text
+    assert results["Q3"]["acc"] == 0
+    assert results["Q3"]["pred_letter"] == ""
+    assert "Completed: 2/3 = 66.67%" in csv_text
+    assert "Total: 1/3 = 33.33%" in csv_text
     assert "basic" in csv_text
+    assert "temporal" in csv_text
 
 
 def test_vila_helpers(tmp_path):
@@ -187,7 +196,18 @@ def test_vila_helpers(tmp_path):
                                         "options": {"A": "image", "B": "video"},
                                         "correct_answer": "B",
                                         "reasoning": "Because it is a video.",
-                                    }
+                                    },
+                                    {
+                                        "global_index": 7,
+                                        "question": "Which medium?",
+                                        "options": {"A": "image", "B": "video"},
+                                        "correct_answer": "B",
+                                    },
+                                    {
+                                        "question": "Which input?",
+                                        "options": {"A": "image", "B": "video"},
+                                        "correct_answer": "B",
+                                    },
                                 ]
                             }
                         },
@@ -198,8 +218,10 @@ def test_vila_helpers(tmp_path):
         encoding="utf-8",
     )
     instances = mod.load_instances(str(question_file))
-    assert len(instances) == 1
+    assert len(instances) == 3
     assert instances[0]["qa_id"] == "Q1"
+    assert instances[1]["qa_id"] == "REVA-G000007"
+    assert instances[2]["qa_id"] == "REVA-demo-BAS-0002"
     assert instances[0]["subcategory"] == "basic"
 
     root = tmp_path / "root"
@@ -213,6 +235,7 @@ def test_vila_helpers(tmp_path):
 
     assert mod.parse_choice("The answer is B.", {"A": "image", "B": "video"}) == "B"
     assert mod.parse_choice("video", {"A": "image", "B": "video"}) == "B"
+    assert mod.parse_choice("It is a video.", {"A": "image", "B": "video"}) == "B"
     assert mod.parse_choice("unknown", {"A": "image", "B": "video"}) is None
 
     metrics = mod.summarize(
@@ -225,3 +248,43 @@ def test_vila_helpers(tmp_path):
     assert metrics["num_answered"] == 1
     assert metrics["accuracy"] == 0.5
     assert metrics["by_subcategory"]["basic"]["accuracy"] == 0.5
+
+
+def test_compare_qwen_completion_metrics(tmp_path):
+    mod = load_module("compare_metrics", "scripts/compare_model_metrics.py")
+    result_path = tmp_path / "result.csv"
+    result_path.write_text(
+        "Completed: 3/4 = 75.00%\n"
+        "Total: 2/4 = 50.00%\n",
+        encoding="utf-8",
+    )
+    metrics = mod.read_qwen_csv(result_path)
+    assert metrics["accuracy"] == 0.5
+    assert metrics["num_questions"] == 4
+    assert metrics["num_answered"] == 3
+
+
+def test_setup_checker_validates_video_references(tmp_path):
+    mod = load_module("check_setup", "scripts/check_student_setup.py")
+    qwen_root = tmp_path / "qwen_train"
+    qwen_root.mkdir()
+    qwen_json = qwen_root / "train.json"
+    qwen_json.write_text(json.dumps([{"video": "videos/demo.mp4"}]), encoding="utf-8")
+    assert not mod.check_qwen_video_references(qwen_json, qwen_root)
+
+    (qwen_root / "videos").mkdir()
+    (qwen_root / "videos/demo.mp4").write_bytes(b"fake")
+    assert mod.check_qwen_video_references(qwen_json, qwen_root)
+
+    reva_root = tmp_path / "reva_test"
+    reva_root.mkdir()
+    reva_json = reva_root / "test_set.json"
+    reva_json.write_text(
+        json.dumps({"videos": {"demo": {"file_path": "videos/demo.mp4"}}}),
+        encoding="utf-8",
+    )
+    assert not mod.check_reva_video_references(reva_json, reva_root)
+
+    (reva_root / "videos").mkdir()
+    (reva_root / "videos/demo.mp4").write_bytes(b"fake")
+    assert mod.check_reva_video_references(reva_json, reva_root)

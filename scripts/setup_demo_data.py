@@ -19,7 +19,7 @@ def write_json(path: Path, data: object) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
-def build_reva_split() -> dict:
+def build_reva_split(qa_items: list[dict]) -> dict:
     return {
         "videos": {
             "demo_video_001": {
@@ -27,37 +27,74 @@ def build_reva_split() -> dict:
                 "dataset_name": "demo",
                 "mcq": {
                     "video_qa": {
-                        "basic_understanding": [
-                            {
-                                "qa_id": "DEMO-001",
-                                "question": "What type of media is shown in the input?",
-                                "options": {
-                                    "A": "A still image",
-                                    "B": "A video clip",
-                                    "C": "An audio-only file",
-                                    "D": "A text document",
-                                },
-                                "correct_answer": "B",
-                                "reasoning": "The input is provided as a video file.",
-                            },
-                            {
-                                "qa_id": "DEMO-002",
-                                "question": "Which answer format should the model return?",
-                                "options": {
-                                    "A": "Only the option letter",
-                                    "B": "A full essay",
-                                    "C": "Python code",
-                                    "D": "A file path",
-                                },
-                                "correct_answer": "A",
-                                "reasoning": "The evaluation prompt asks for the option letter.",
-                            },
-                        ]
+                        "visual_text_understanding": qa_items
                     }
                 },
             }
         }
     }
+
+
+def build_demo_train_split() -> dict:
+    return build_reva_split(
+        [
+            {
+                "qa_id": "DEMO-TRAIN-001",
+                "question": "What type of business is advertised in the video title?",
+                "options": {
+                    "A": "A grocery store",
+                    "B": "A hand car wash",
+                    "C": "A railway station",
+                    "D": "A hotel",
+                },
+                "correct_answer": "B",
+                "reasoning": "The title card contains the words 'Premier Hand Car Wash'.",
+            },
+            {
+                "qa_id": "DEMO-TRAIN-002",
+                "question": "Which place name appears in the largest line of text?",
+                "options": {
+                    "A": "Oxford",
+                    "B": "London",
+                    "C": "Birmingham",
+                    "D": "Bromsgrove",
+                },
+                "correct_answer": "D",
+                "reasoning": "The largest title reads 'Bromsgrove Car Wash'.",
+            },
+        ]
+    )
+
+
+def build_demo_test_split() -> dict:
+    return build_reva_split(
+        [
+            {
+                "qa_id": "DEMO-TEST-001",
+                "question": "Which road name is displayed on the title card?",
+                "options": {
+                    "A": "Oxford Road",
+                    "B": "London Road",
+                    "C": "Worcester Road",
+                    "D": "Station Road",
+                },
+                "correct_answer": "C",
+                "reasoning": "The address text includes 'Worcester Road'.",
+            },
+            {
+                "qa_id": "DEMO-TEST-002",
+                "question": "Which full service description appears below the main title?",
+                "options": {
+                    "A": "Premier Hand Car Wash",
+                    "B": "Express Laundry Service",
+                    "C": "Automatic Fuel Station",
+                    "D": "Budget Bicycle Repair",
+                },
+                "correct_answer": "A",
+                "reasoning": "The smaller text below the title reads 'Premier Hand Car Wash'.",
+            },
+        ]
+    )
 
 
 def copy_if_needed(source: Path, target: Path) -> None:
@@ -101,10 +138,11 @@ def main() -> None:
     copy_if_needed(short_video, train_video_dir / VIDEO_NAME)
     copy_if_needed(short_video, test_video_dir / VIDEO_NAME)
 
-    split = build_reva_split()
-    write_json(PROJECT_ROOT / "data" / "demo_reva" / "train_set.json", split)
-    write_json(PROJECT_ROOT / "data" / "demo_reva" / "test_set.json", split)
-    write_json(PROJECT_ROOT / "data" / "reva_test" / "test_set.json", split)
+    train_split = build_demo_train_split()
+    test_split = build_demo_test_split()
+    write_json(PROJECT_ROOT / "data" / "demo_reva" / "train_set.json", train_split)
+    write_json(PROJECT_ROOT / "data" / "demo_reva" / "test_set.json", test_split)
+    write_json(PROJECT_ROOT / "data" / "reva_test" / "test_set.json", test_split)
 
     print("Demo data ready:")
     print(f"  train annotations: {PROJECT_ROOT / 'data/demo_reva/train_set.json'}")

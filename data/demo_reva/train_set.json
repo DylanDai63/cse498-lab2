@@ -5,30 +5,30 @@
       "dataset_name": "demo",
       "mcq": {
         "video_qa": {
-          "basic_understanding": [
+          "visual_text_understanding": [
             {
-              "qa_id": "DEMO-001",
-              "question": "What type of media is shown in the input?",
+              "qa_id": "DEMO-TRAIN-001",
+              "question": "What type of business is advertised in the video title?",
               "options": {
-                "A": "A still image",
-                "B": "A video clip",
-                "C": "An audio-only file",
-                "D": "A text document"
+                "A": "A grocery store",
+                "B": "A hand car wash",
+                "C": "A railway station",
+                "D": "A hotel"
               },
               "correct_answer": "B",
-              "reasoning": "The input is provided as a video file."
+              "reasoning": "The title card contains the words 'Premier Hand Car Wash'."
             },
             {
-              "qa_id": "DEMO-002",
-              "question": "Which answer format should the model return?",
+              "qa_id": "DEMO-TRAIN-002",
+              "question": "Which place name appears in the largest line of text?",
               "options": {
-                "A": "Only the option letter",
-                "B": "A full essay",
-                "C": "Python code",
-                "D": "A file path"
+                "A": "Oxford",
+                "B": "London",
+                "C": "Birmingham",
+                "D": "Bromsgrove"
               },
-              "correct_answer": "A",
-              "reasoning": "The evaluation prompt asks for the option letter."
+              "correct_answer": "D",
+              "reasoning": "The largest title reads 'Bromsgrove Car Wash'."
             }
           ]
         }

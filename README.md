@@ -73,6 +73,8 @@ By default this creates a 200-sample subset at:
 data/qwen_train/train.json
 ```
 
+Video existence checks are enabled by default. If none of the referenced videos can be resolved under `QWEN_VIDEO_ROOT`, conversion stops without replacing the existing training JSON.
+
 Use more or fewer samples with:
 
 ```bash
@@ -163,7 +165,7 @@ REVA_ROOT=/path/to/ReVA_V2 \
 REVA_JSON=/path/to/ReVA_V2/test_set.json \
 NUM_CHUNKS=1 \
 MAX_FRAMES=32 \
-CONDA_ENV=verl \
+CONDA_ENV=qwen2 \
 bash scripts/run_eval_reva.sh
 ```
 
@@ -175,6 +177,10 @@ outputs/qwen_base/qwen_base/result.csv
 outputs/qwen_sft/qwen_sft/result.json
 outputs/qwen_sft/qwen_sft/result.csv
 ```
+
+`result.csv` reports completion separately from accuracy. Accuracy always uses all prepared GT questions as its denominator, so missing or unparsable predictions cannot inflate the score.
+
+Evaluation output directories are protected against stale-result reuse. Use a new `EVAL_NAME` for a fresh run. Set `RESUME=1` only when continuing the same model, data, frame, backend, and shard configuration.
 
 ## 4. Evaluate VILA on ReVA
 

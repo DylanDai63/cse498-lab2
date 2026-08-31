@@ -28,7 +28,12 @@ def normalize_video_path(file_path: str, video_root: Path | None = None) -> str:
     path = Path(file_path)
     if video_root is None:
         return path.as_posix()
-    return path.relative_to(video_root).as_posix() if path.is_absolute() else path.as_posix()
+    if not path.is_absolute():
+        return path.as_posix()
+    try:
+        return path.relative_to(video_root).as_posix()
+    except ValueError:
+        return path.as_posix()
 
 
 def format_options(options: dict[str, str]) -> str:
@@ -94,6 +99,12 @@ def main() -> None:
         samples.append(sample)
         if args.max_samples and len(samples) >= args.max_samples:
             break
+
+    if args.require_video and not samples:
+        raise SystemExit(
+            "No training samples reference an existing video. "
+            "Check QWEN_VIDEO_ROOT and the downloaded ReVA directory; output was not modified."
+        )
 
     dump_json(samples, args.output)
     print(f"Saved {len(samples)} Qwen training samples to {args.output}")
