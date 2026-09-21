@@ -14,7 +14,7 @@
 
 \title{CSE 398/498 Lab 2 Report:\\Fine-Tuning Qwen3-VL and Evaluating Video QA on ReVA}
 \author{Hengde Dai \\ \texttt{hed424@lehigh.edu}}
-\date{September 21, 2026}
+\date{September 20, 2026}
 
 \begin{document}
 
@@ -127,7 +127,7 @@ Question type & $n$ & Qwen base & Qwen fine-tuned & VILA & Gained / lost \\
 
 \textbf{Case 2, temporal reasoning (QA-001983, Temporal Grounding).} The question asks how long a white bus remains visible. All four options last 2.0 seconds and differ only by a 0.5-second shift of the start time, so the question needs precise temporal localization. The baseline described the scene every 0.5 seconds, reported the bus as still visible up to 6.0 seconds, and ran out of tokens. The fine-tuned model answered C and VILA answered B. The annotation marks D. All three models failed. Fine-tuning repaired the output format of the baseline but did not repair the temporal localization.
 
-\textbf{Case 3, overfitting to the answer format (QA-000629, Geometric Relation).} The question asks whether a motorized rickshaw or the walking people are closer to the camera. The baseline reasoned that the rickshaw is in the foreground and answered A, which is correct. The fine-tuned model answered C, the opposite relation, with no reasoning. Geometric Relation gained no question and lost two after fine-tuning. Of the \Loss{} questions that fine-tuning broke, \LossPickedC{} received the answer C. The pattern suggests that the model learned to skip the reasoning step and, without reasoning, falls back on a letter prior when the question needs a comparison. The available runs do not test the explanation directly.
+\textbf{Case 3, overfitting to the answer format (QA-008909, Causation Reasoning).} The question asks for the most likely cause of a severe traffic jam. The baseline wrote that the video shows no sign of construction, accidents or a major event, pointed to the gas station beside the road, and answered D (vehicles queuing to refuel), which is correct. VILA also answered D. The fine-tuned model answered C, a construction project, with no reasoning. Construction is the cause that the baseline had ruled out from the video. Of the \Loss{} questions that fine-tuning broke, \LossPickedC{} received the answer C. The pattern suggests that the model learned to skip the reasoning step and, without reasoning, falls back on a letter prior when the question needs a comparison. The available runs do not test the explanation directly.
 
 \section{Limitations}
 

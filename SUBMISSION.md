@@ -29,12 +29,13 @@ Base vs. fine-tuned on the same questions: 46 gained, 30 lost, exact McNemar p =
 | Analysis of three examples | `report/main.pdf`, Section 6 |
 | Commands | this file and `report/main.pdf`, Section 8 |
 
-Also included: per-question results (`result.json`, `outputs.jsonl`), the raw prediction shards,
-the LoRA adapter (`outputs/qwen_reva_sft/adapter_model.safetensors`), the evaluation subset
-(`data/eval_subsets/`), the 200 training samples (`data/qwen_train/train.json`) and the logs (`logs/`).
-`outputs/` and `*.log` are ignored by the upstream `.gitignore`, so these files were added with `git add -f`.
+Also included, because the report numbers and the three examples are computed from them: the
+per-question results (`result.json`, `outputs.jsonl`), the training log summary
+(`outputs/qwen_reva_sft/trainer_state.json`), the 500-question evaluation subset and the 200 training
+samples. `outputs/` is ignored by the upstream `.gitignore`, so these files were added with `git add -f`.
 
-Not included: the ReVA videos (28 GB), the model weights, and the conda environments.
+Not included: the ReVA videos (28 GB), model weights, the LoRA adapter weights, raw logs, and the conda
+environments. They remain on the course server under `~/cse498_lab2/`.
 
 ## Unit tests
 
@@ -47,10 +48,9 @@ python -m pytest -q        # 7 passed (5 failed, 2 passed before the TODOs were 
 | File | Purpose |
 | --- | --- |
 | `scripts/make_eval_subset.py` | Reproducible stratified evaluation subset plus the complementary "rest" file |
-| `data/eval_subsets/*.json` | The 500-question subset and the remaining 3500 questions |
+| `data/eval_subsets/test_subset_500_seed2026.json` | The 500-question subset used for all three models |
 | `vila_eval/vila_local_patches.diff` | My three patches to `NVlabs/VILA@0f1426e` (`git apply` inside the VILA checkout) |
 | `report/` | Report source, PDF and `make_results_tex.py`, which regenerates every number in the report |
-| `logs/` | Training and evaluation logs |
 
 ## Hardware adaptation switches
 
@@ -119,6 +119,7 @@ python report/make_results_tex.py
 
 ## Extending to the full test split
 
-`data/eval_subsets/test_rest_3500_seed2026.json` holds the other 3500 questions with the same stable
-ids. Evaluate it with the same settings under a new `EVAL_NAME`, copy the prediction shards next to
-the existing ones, and score against the full prepared test set. No question is evaluated twice.
+`scripts/make_eval_subset.py` also writes `data/eval_subsets/test_rest_3500_seed2026.json`, the other
+3500 questions with the same stable ids (same seed, deterministic). Evaluate it with the same settings
+under a new `EVAL_NAME`, copy the prediction shards next to the existing ones, and score against the
+full prepared test set. No question is evaluated twice. Then run `python report/make_results_tex.py`.

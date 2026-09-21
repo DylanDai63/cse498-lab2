@@ -1,8 +1,0 @@
-MODEL_PATH=/data/users/jupyter-hed424/cse498_lab2/models/Qwen3-VL-4B-Instruct
-MODEL_BASE=
-REVA_ROOT=/data/users/jupyter-hed424/cse498_lab2/data_reva
-REVA_JSON=/data/users/jupyter-hed424/cse498_lab2/submission/data/eval_subsets/test_subset_500_seed2026.json
-NUM_CHUNKS=4
-MAX_FRAMES=32
-MAX_PIXELS=50176
-BACKEND=transformers
