@@ -1,0 +1,15 @@
+Completed: 500/500 = 100.00%
+Total: 342/500 = 68.40%
+Missing predictions: 0
+Unparsable predictions: 0
+Causation Reasoning: 21/23 = 91.30%
+Change Detection: 40/63 = 63.49%
+Consequence Reasoning: 12/13 = 92.31%
+General Understanding: 22/22 = 100.00%
+Geometric Relation: 37/50 = 74.00%
+Hypothetical Reasoning: 17/20 = 85.00%
+Object and Land Cover Recognition: 59/82 = 71.95%
+Perspective and Viewpoint: 45/60 = 75.00%
+Structural Layout: 27/42 = 64.29%
+Temporal Grounding: 36/80 = 45.00%
+Trend and Pattern: 26/45 = 57.78%

@@ -11,6 +11,14 @@ MODEL_BASE=${MODEL_BASE:-""}
 REVA_ROOT=${REVA_ROOT:-"$PROJECT_ROOT/data/reva_test"}
 REVA_JSON=${REVA_JSON:-"$REVA_ROOT/test_set.json"}
 NUM_CHUNKS=${NUM_CHUNKS:-1}
+# Hardware adaptation (student): physical GPU ids to use, one per chunk, space separated.
+# Defaults to 0..NUM_CHUNKS-1, which is exactly the original behaviour. On a shared server
+# where GPU 0 is busy:  GPU_IDS="1 2 3" NUM_CHUNKS=3 bash scripts/run_eval_qwen_base.sh
+read -r -a GPU_ID_LIST <<< "${GPU_IDS:-$(seq -s ' ' 0 $((NUM_CHUNKS - 1)))}"
+if [ "${#GPU_ID_LIST[@]}" -ne "$NUM_CHUNKS" ]; then
+    echo "GPU_IDS must list exactly NUM_CHUNKS=$NUM_CHUNKS GPU ids, got: ${GPU_ID_LIST[*]}" >&2
+    exit 2
+fi
 MAX_FRAMES=${MAX_FRAMES:-32}
 MAX_PIXELS=${MAX_PIXELS:-$((224*224))}
 GPU_MEM_UTIL=${GPU_MEM_UTIL:-0.9}
@@ -26,6 +34,7 @@ echo "Model:      $MODEL_PATH"
 echo "ReVA root:  $REVA_ROOT"
 echo "ReVA json:  $REVA_JSON"
 echo "GPU chunks: $NUM_CHUNKS"
+echo "GPU ids:    ${GPU_ID_LIST[*]}"
 echo "Max frames: $MAX_FRAMES"
 echo "Backend:    $BACKEND"
 echo "Resume:     $RESUME"
@@ -108,7 +117,7 @@ for idx in $(seq 0 $((NUM_CHUNKS - 1))); do
     if [ -n "$MODEL_BASE" ]; then
         extra_args+=(--model-base "$MODEL_BASE")
     fi
-    CUDA_VISIBLE_DEVICES=$idx conda run -n "$CONDA_ENV" python3 inference_vllm_origin_number.py \
+    CUDA_VISIBLE_DEVICES=${GPU_ID_LIST[$idx]} conda run -n "$CONDA_ENV" python3 inference_vllm_origin_number.py \
         --model-path "$MODEL_PATH" \
         "${extra_args[@]}" \
         --video_dir "$REVA_ROOT" \

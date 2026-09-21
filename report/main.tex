@@ -1,0 +1,170 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{enumitem}
+\setlist{nosep}
+\usepackage[skip=4pt]{caption}
+
+% All numbers come from report/make_results_tex.py (re-run the script after a new evaluation).
+\input{results.tex}
+
+\title{CSE 398/498 Lab 2 Report:\\Fine-Tuning Qwen3-VL and Evaluating Video QA on ReVA}
+\author{Hengde Dai \\ \texttt{hed424@lehigh.edu}}
+\date{September 21, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\centering
+\textbf{GitHub repository (completed code, result files, LoRA adapter, logs, report source):}\\[2pt]
+\large\url{https://github.com/DylanDai63/cse498-lab2}
+}}
+\end{center}
+
+\section{Overview}
+
+I completed the 18 \texttt{TODO(student)} functions in the four assignment files. The public unit tests went from 5 failed and 2 passed to 7 passed. I then ran the full workflow on the course MAGIC server: Qwen3-VL-4B-Instruct as the baseline, a LoRA fine-tuned Qwen3-VL-4B, and VILA1.5-3b as the second baseline. All three models answered the same \NQ{} ReVA test questions. Table~\ref{tab:main} gives the comparison that \path{scripts/compare_models.sh} writes to \path{outputs/model_comparison.csv}.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lrrr}
+\toprule
+Model & Accuracy & Correct / questions & Answered \\
+\midrule
+Qwen3-VL-4B base & \AccBase\% & \CorBase{} / \NQ & \AnsBase \\
+Qwen3-VL-4B fine-tuned (LoRA) & \AccSft\% & \CorSft{} / \NQ & \AnsSft \\
+VILA1.5-3b base & \AccVila\% & \CorVila{} / \NQ & \AnsVila \\
+\bottomrule
+\end{tabular}
+\caption{Results on the same \NQ-question subset of the ReVA test split. Accuracy divides by all \NQ{} questions. An unanswered or unparsable prediction counts as incorrect.}
+\label{tab:main}
+\end{table}
+
+Environment: \texttt{magic01.cse.lehigh.edu}, a shared server with four RTX 2080 Ti GPUs (11 GB each, Turing architecture). The \texttt{qwen2} conda environment uses Python 3.10, PyTorch 2.6.0 with CUDA 12.4, transformers 4.57.6, peft 0.17.1 and deepspeed 0.17.1. The \texttt{vila} environment uses PyTorch 2.3.0 and transformers 4.46.0.
+
+\section{Implementation of the TODO Functions}
+
+\textbf{Part 1, \path{scripts/build_qwen_train_data.py}.} \texttt{format\_options} sorts the option labels because the annotation JSON does not guarantee A to D order. \texttt{format\_question} starts with the \texttt{<video>} placeholder and, in the \texttt{reva\_eval} style, copies the wording of the evaluation prompt in \path{reva_eval/eval_reva_v2.sh}, so the model sees the same instruction in training and in evaluation. \texttt{format\_answer} upper-cases the letter and supports the three answer styles. \texttt{iter\_reva\_qas} flattens the four nested levels (video, category, question type, QA list) into one record per question. \texttt{convert\_item} keeps the video path relative to \path{data/qwen_train}, which is the root that the Qwen data loader joins with the path. The function returns \texttt{None} for a missing video, so \texttt{main} can count skipped samples and refuse to write an empty training set.
+
+\textbf{Part 2, test-set preparation and scoring.} The two files are \path{reva_eval/data/rsvidqa/prepare_reva_v2_test_set.py} and \path{scripts/score_reva_predictions.py}. \texttt{get\_qa\_id} prefers \texttt{qa\_id}, then \texttt{global\_index}, then an id built from the video file name, the question type and the question index. All three levels matter on the real data. The 4000 test questions contain 2582 ids of the first kind, 1393 of the second and 25 of the third, and I checked that all 4000 ids are unique. \texttt{extract\_letter} parses in tiers from most to least explicit: a bare letter, a leading label such as ``B.'', an ``answer is C'' cue, and finally a single stand-alone capital letter. Text inside \texttt{<think>} is removed first, and an ambiguous output returns an empty string instead of a guess. \texttt{score\_predictions} loops over the ground truth, not over the predictions. A missing or unparsable prediction therefore stays in the denominator, and the scorer reports \texttt{Completed} separately from \texttt{Total}.
+
+\textbf{Part 3, \path{vila_eval/reva_v2.py}.} \texttt{load\_instances} uses the same id recipe as Part 2, so a Qwen prediction and a VILA prediction for one question share one id. \texttt{resolve\_video\_path} tries the raw path, the path under the dataset root, and the path with the dataset prefix removed, and raises an error when nothing resolves. \texttt{parse\_choice} adds one tier to the Qwen parser. An answer given as option text is accepted when exactly one option matches. \texttt{summarize} reports \texttt{num\_answered} next to accuracy, overall and per category.
+
+\section{Experimental Setup}
+
+\textbf{Data.} I downloaded ReVA from Hugging Face. The file \texttt{test\_set.json} has the same MD5 checksum as the instructor copy in \path{/data/datasets/ReVA}. The test split has 4000 questions on 1014 videos, and every referenced video exists on disk.
+
+\textbf{Evaluation subset.} A timing run on real data measured about 7.5 seconds per question per GPU for the Qwen baseline, because the prompt asks for step-by-step reasoning and the GPUs emulate bfloat16. One full evaluation would take about two hours on four GPUs of a server that other students share. I therefore evaluated all three models on one fixed subset of \NQ{} questions. The script \path{scripts/make_eval_subset.py} draws the subset stratified by question type with seed 2026, pins the stable id of every question, and also writes the complementary 3500 questions. The remaining questions can be evaluated later and scored together with the subset, with no question evaluated twice. At \NQ{} questions the standard error of one accuracy value is about $\pm$\StdErr{} percentage points.
+
+\textbf{Training data and fine-tuning.} I used the script default of 200 training samples. The 200 answers are balanced (50 for each letter), cover all 11 question types, and come from 17 videos. Only 8 of the \NQ{} test questions use one of those 17 videos. Fine-tuning used the provided LoRA setup: rank 8, alpha 16, adapters on the q, k, v and o projections, 1 epoch, batch size 1 with 4 gradient accumulation steps (\TrainSteps{} optimizer steps), and 4 frames per video. I changed one hyperparameter. The default learning rate of $2\times10^{-7}$ suits full fine-tuning, but LoRA adapters start from zero and would barely move in \TrainSteps{} steps, so I used $1\times10^{-4}$. Training took \TrainSeconds{} seconds on one GPU. The mean loss fell from \LossFirstTen{} over the first ten steps to \LossLastTen{} over the last ten.
+
+\textbf{Evaluation settings.} Both Qwen runs used the script defaults: 32 frames, 50176 pixels per frame, greedy decoding and at most 1024 new tokens. VILA used the script default of 4 frames and float16 weights.
+
+\section{Hardware Adaptation}
+
+The provided scripts assume GPUs with FlashAttention~2 and native bfloat16 support. The RTX 2080 Ti has neither. I added the switches in Table~\ref{tab:hw}. Every switch keeps the original behaviour when the variable is unset, so the code still runs unchanged on newer GPUs.
+
+\begin{table}[h]
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.27\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.27\textwidth}}
+\toprule
+Problem on the server & Change & Setting I used \\
+\midrule
+FlashAttention~2 does not support Turing GPUs & \path{trainer.py} imports \texttt{flash\_attn} optionally; \path{train_qwen.py} reads the attention backend from a variable; \path{sft_7b.sh} reads \texttt{--data\_flatten} from a variable & \texttt{ATTN\_IMPLEMENTATION=sdpa}\newline \texttt{DATA\_FLATTEN=False} \\
+\addlinespace
+\texttt{ValueError: Your setup doesn't support bf16/gpu} & \path{sft_7b.sh} selects the precision flag; \path{train_qwen.py} can load the frozen base weights in bfloat16 without the flag. PEFT keeps the LoRA weights in float32 & \texttt{PRECISION=none}\newline \texttt{MODEL\_DTYPE=bfloat16} \\
+\addlinespace
+\texttt{RuntimeError: Expected to mark a variable ready only once} (LoRA with reentrant gradient checkpointing under DDP) & \path{sft_7b.sh} appends extra Trainer flags & \texttt{EXTRA\_TRAIN\_ARGS} with the two flags shown in Section~8 \\
+\addlinespace
+CUDA out of memory in evaluation with the hard-coded batch of 8 & \path{inference_vllm_origin_number.py} reads the batch size from a variable & \texttt{EVAL\_BATCH\_SIZE=4} \\
+\addlinespace
+GPU 0 is often busy on the shared server & \path{eval_reva_v2.sh} accepts a list of physical GPU ids & \texttt{GPU\_IDS="2 3"} \\
+\addlinespace
+\texttt{torchcodec} cannot load without FFmpeg & Installed FFmpeg 7 from conda-forge into the environment & none \\
+\bottomrule
+\end{tabularx}
+\caption{Hardware adaptations. All defaults reproduce the original scripts.}
+\label{tab:hw}
+\end{table}
+
+VILA needed three local patches to the NVlabs/VILA repository, which I saved as \path{vila_eval/vila_local_patches.diff}. The SigLIP vision tower now loads with SDPA attention instead of FlashAttention~2. The PS3 vision tower import is optional, because \texttt{ps3-torch} conflicts with the \texttt{timm} version that VILA needs. The video loader treats a null \texttt{fps} value in the VILA1.5 configuration as zero. I also installed triton 3.1.0, as the official VILA setup script does.
+
+\section{Results}
+
+Table~\ref{tab:types} lists accuracy by question type. The three time-related types (Temporal Grounding, Trend and Pattern, Change Detection) are the weakest types for both Qwen models, and Temporal Grounding is the weakest type for VILA. VILA scores 27.5\% on Temporal Grounding, which is close to the 25\% chance level of a four-option question.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Question type & $n$ & Qwen base & Qwen fine-tuned & VILA & Gained / lost \\
+\midrule
+\TypeRows
+\bottomrule
+\end{tabular}
+\caption{Accuracy (\%) by question type. The last column counts questions that changed between the Qwen baseline and the fine-tuned model.}
+\label{tab:types}
+\end{table}
+
+\textbf{Effect of fine-tuning.} Accuracy rose from \AccBase\% to \AccSft\%. Both Qwen runs answered the same questions, so I compared the two runs question by question. Fine-tuning fixed \Gain{} questions and broke \Loss{}, a net gain of \NetGain{}. An exact McNemar test on the \Gain{} and \Loss{} changed questions gives $p = \McNemarP$. The improvement is suggestive but not statistically significant at \NQ{} questions. Most of the gain comes from Temporal Grounding and from Perspective and Viewpoint. Change Detection and Object Recognition mostly trade one question for another.
+
+\textbf{Output format.} Fine-tuning changed the output style more than it changed accuracy. The baseline wrote a median of \MedLenBase{} characters, and only \DirectBase{} of \NQ{} outputs started directly with the \texttt{<answer>} tag. After fine-tuning all \DirectSft{} outputs are exactly \texttt{<answer>X</answer>} (\MedLenSft{} characters). The training targets contain only the tagged letter, and the model adopted the target format. The five unparsable baseline outputs disappeared as a result.
+
+\textbf{Letter preference.} The ground truth is balanced across A, B, C and D (\LetGtA, \LetGtB, \LetGtC, \LetGtD). The Qwen baseline chose C \LetBaseC{} times and the fine-tuned model chose C \LetSftC{} times. The 200 training answers are balanced, so the preference does not come from the training labels. VILA prefers A (\LetVilaA{} times) and rarely chooses C (\LetVilaC{} times). Each model appears to carry a letter prior of its own.
+
+\section{Qualitative Analysis}
+
+\textbf{Case 1, option parsing (REVA-G001758, Temporal Grounding).} The question asks when the first vehicle appears on the bridge. The options are 0.0, 5.0, 1.5 and 3.0 seconds, and the annotation marks 0.0 seconds. The baseline wrote that the bridge is empty at 0.0 seconds and that the vehicle appears at 0.5 seconds. Because 0.5 seconds is not an option, the baseline alternated between A and C, repeated ``But wait'', and reached the 1024-token limit without an \texttt{<answer>} tag. The scorer counted the output as unparsable. The perception was close to the annotation. The failure lies in committing to an option. The fine-tuned model answered \texttt{<answer>A</answer>} and was correct. A fifth unparsable baseline output (QA-009967) shows a visual perception failure. The baseline did not see the small body of water in the video and answered ``None of the above'', which is not among the options.
+
+\textbf{Case 2, temporal reasoning (QA-001983, Temporal Grounding).} The question asks how long a white bus remains visible. All four options last 2.0 seconds and differ only by a 0.5-second shift of the start time, so the question needs precise temporal localization. The baseline described the scene every 0.5 seconds, reported the bus as still visible up to 6.0 seconds, and ran out of tokens. The fine-tuned model answered C and VILA answered B. The annotation marks D. All three models failed. Fine-tuning repaired the output format of the baseline but did not repair the temporal localization.
+
+\textbf{Case 3, overfitting to the answer format (QA-000629, Geometric Relation).} The question asks whether a motorized rickshaw or the walking people are closer to the camera. The baseline reasoned that the rickshaw is in the foreground and answered A, which is correct. The fine-tuned model answered C, the opposite relation, with no reasoning. Geometric Relation gained no question and lost two after fine-tuning. Of the \Loss{} questions that fine-tuning broke, \LossPickedC{} received the answer C. The pattern suggests that the model learned to skip the reasoning step and, without reasoning, falls back on a letter prior when the question needs a comparison. The available runs do not test the explanation directly.
+
+\section{Limitations}
+
+The numbers come from \NQ{} of the 4000 test questions and from a single training run with one seed. The first 277 baseline questions ran with an evaluation batch of 8 before the out-of-memory crash, and the rest ran with a batch of 4. Decoding is greedy, so the batch size can change an answer only through padding. Training used 4 frames per video while evaluation used 32. VILA saw 4 frames per video while Qwen saw 32, because VILA1.5-3b was trained with 8 frames and a 4096-token context. The comparison between Qwen and VILA therefore mixes model quality with input budget.
+
+\section{Commands}
+
+The repository README lists every command in order. The three evaluation runs and the training run were:
+
+{\footnotesize
+\begin{verbatim}
+python scripts/make_eval_subset.py --input $REVA/test_set.json --size 500 --seed 2026
+
+NUM_CHUNKS=4 EVAL_NAME=qwen_base REVA_ROOT=$REVA REVA_JSON=$SUBSET MODEL_PATH=$QWEN \
+  bash scripts/run_eval_qwen_base.sh     # default batch 8: CUDA OOM after 277 questions
+RESUME=1 EVAL_BATCH_SIZE=4 NUM_CHUNKS=4 EVAL_NAME=qwen_base REVA_ROOT=$REVA \
+  REVA_JSON=$SUBSET MODEL_PATH=$QWEN bash scripts/run_eval_qwen_base.sh    # resumed
+
+CUDA_VISIBLE_DEVICES=3 ATTN_IMPLEMENTATION=sdpa DATA_FLATTEN=False PRECISION=none \
+  MODEL_DTYPE=bfloat16 USE_DEEPSPEED=0 NPROC_PER_NODE=1 LR=1e-4 MODEL_PATH=$QWEN \
+  EXTRA_TRAIN_ARGS='--ddp_find_unused_parameters False
+                    --gradient_checkpointing_kwargs {"use_reentrant":false}' \
+  bash scripts/run_finetune_qwen.sh
+
+GPU_IDS="2 3" NUM_CHUNKS=2 EVAL_BATCH_SIZE=4 EVAL_NAME=qwen_sft REVA_ROOT=$REVA \
+  REVA_JSON=$SUBSET MODEL_BASE=$QWEN MODEL_PATH=outputs/qwen_reva_sft/checkpoint-50 \
+  bash scripts/run_eval_qwen_finetuned.sh
+
+GPU=1 VILA_REPO=$VILA MODEL_PATH=$VILA_MODEL REVA_ROOT=$REVA REVA_JSON=$SUBSET \
+  bash scripts/run_eval_reva_vila.sh
+
+bash scripts/compare_models.sh
+\end{verbatim}
+}
+
+\section*{AI Use Statement}
+
+I used Claude (Anthropic) as an assistant throughout the lab: for setting up the server environments, for diagnosing the hardware incompatibilities in Section~4, for implementing and testing the TODO functions, for the analysis scripts, and for drafting the report text. I ran every command on the server myself and reviewed the code and the results.
+
+\end{document}

@@ -1,0 +1,4002 @@
+{
+  "QA-000053": {
+    "question_type": "Causation Reasoning",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-000090": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-000133": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-000189": {
+    "question_type": "Trend and Pattern",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-000192": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-000201": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-000251": {
+    "question_type": "Geometric Relation",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-000259": {
+    "question_type": "Change Detection",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-000274": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-000354": {
+    "question_type": "Consequence Reasoning",
+    "gt": "B",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-000408": {
+    "question_type": "Structural Layout",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-000415": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-000510": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-000540": {
+    "question_type": "Consequence Reasoning",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-000545": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-000629": {
+    "question_type": "Geometric Relation",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-000715": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-000725": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-000782": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-000789": {
+    "question_type": "Trend and Pattern",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-000791": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-000822": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G003076": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-000874": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-000919": {
+    "question_type": "Structural Layout",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001063": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-001076": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-001119": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001124": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001175": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001208": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001212": {
+    "question_type": "Consequence Reasoning",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001228": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001255": {
+    "question_type": "Causation Reasoning",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001265": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001287": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-001305": {
+    "question_type": "Change Detection",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001323": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001347": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-001348": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001591": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-001664": {
+    "question_type": "Structural Layout",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001667": {
+    "question_type": "Consequence Reasoning",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001721": {
+    "question_type": "Change Detection",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001733": {
+    "question_type": "Causation Reasoning",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001754": {
+    "question_type": "Causation Reasoning",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001798": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001873": {
+    "question_type": "Trend and Pattern",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001878": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001935": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-001983": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-002024": {
+    "question_type": "Change Detection",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002027": {
+    "question_type": "Trend and Pattern",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002226": {
+    "question_type": "Geometric Relation",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002229": {
+    "question_type": "Causation Reasoning",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002256": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-002396": {
+    "question_type": "Causation Reasoning",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002462": {
+    "question_type": "General Understanding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002483": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-002508": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002606": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-002627": {
+    "question_type": "General Understanding",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002639": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002653": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-002679": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002726": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002740": {
+    "question_type": "Structural Layout",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002850": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002854": {
+    "question_type": "Change Detection",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002884": {
+    "question_type": "Structural Layout",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002879": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002914": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-002919": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003035": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003053": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-003090": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003159": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-003177": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-003210": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-003217": {
+    "question_type": "Trend and Pattern",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003218": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003261": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003264": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003312": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-003358": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-003398": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003499": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-003502": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G003093": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-003558": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003666": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003702": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003734": {
+    "question_type": "Structural Layout",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-003741": {
+    "question_type": "Change Detection",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003749": {
+    "question_type": "Structural Layout",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003746": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003773": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003787": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003798": {
+    "question_type": "Change Detection",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G003993": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-003845": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G003997": {
+    "question_type": "Trend and Pattern",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003952": {
+    "question_type": "General Understanding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006631": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-003971": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004002": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G004020": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G004023": {
+    "question_type": "Causation Reasoning",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004063": {
+    "question_type": "Consequence Reasoning",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004074": {
+    "question_type": "Geometric Relation",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004093": {
+    "question_type": "Structural Layout",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004190": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004206": {
+    "question_type": "Causation Reasoning",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004223": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004296": {
+    "question_type": "Change Detection",
+    "gt": "D",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-004302": {
+    "question_type": "Trend and Pattern",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-004343": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004414": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-004466": {
+    "question_type": "General Understanding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004519": {
+    "question_type": "Change Detection",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-004552": {
+    "question_type": "Structural Layout",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004554": {
+    "question_type": "Causation Reasoning",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004563": {
+    "question_type": "Change Detection",
+    "gt": "C",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-004643": {
+    "question_type": "Structural Layout",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004670": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004835": {
+    "question_type": "Change Detection",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004873": {
+    "question_type": "General Understanding",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004874": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004923": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-004970": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-004987": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005017": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005055": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-005103": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-005147": {
+    "question_type": "Change Detection",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005233": {
+    "question_type": "General Understanding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005284": {
+    "question_type": "Change Detection",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G004068": {
+    "question_type": "Change Detection",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005356": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005398": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005458": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005506": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005559": {
+    "question_type": "Causation Reasoning",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005568": {
+    "question_type": "Change Detection",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-005645": {
+    "question_type": "Geometric Relation",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006664": {
+    "question_type": "Change Detection",
+    "gt": "C",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-005718": {
+    "question_type": "Trend and Pattern",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-005757": {
+    "question_type": "Change Detection",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-005776": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-005777": {
+    "question_type": "Change Detection",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005806": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005812": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-005832": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005865": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005920": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005950": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-005988": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006157": {
+    "question_type": "Causation Reasoning",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006170": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-006198": {
+    "question_type": "Structural Layout",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006210": {
+    "question_type": "Change Detection",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006226": {
+    "question_type": "General Understanding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006242": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006269": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006299": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006316": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-006379": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006382": {
+    "question_type": "Trend and Pattern",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006402": {
+    "question_type": "Change Detection",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006420": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006485": {
+    "question_type": "Trend and Pattern",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006486": {
+    "question_type": "Trend and Pattern",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006503": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006517": {
+    "question_type": "General Understanding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006580": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006628": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-006736": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-006757": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006787": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006795": {
+    "question_type": "Change Detection",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006812": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006864": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-006880": {
+    "question_type": "Structural Layout",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006892": {
+    "question_type": "Change Detection",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-006933": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006961": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-006979": {
+    "question_type": "Trend and Pattern",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-007036": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007043": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007096": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007100": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007159": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007177": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007217": {
+    "question_type": "Change Detection",
+    "gt": "D",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-007246": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007298": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-007310": {
+    "question_type": "Geometric Relation",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007361": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007445": {
+    "question_type": "Change Detection",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007498": {
+    "question_type": "Geometric Relation",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007515": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007556": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007604": {
+    "question_type": "Trend and Pattern",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007621": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007640": {
+    "question_type": "General Understanding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007645": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007661": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007668": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007678": {
+    "question_type": "Causation Reasoning",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007686": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007753": {
+    "question_type": "Change Detection",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007774": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007846": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "C",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-007859": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-007947": {
+    "question_type": "Change Detection",
+    "gt": "C",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-008032": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006699": {
+    "question_type": "Change Detection",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008076": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008092": {
+    "question_type": "Causation Reasoning",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008099": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008114": {
+    "question_type": "Structural Layout",
+    "gt": "B",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-008121": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-008180": {
+    "question_type": "General Understanding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008187": {
+    "question_type": "Change Detection",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008204": {
+    "question_type": "General Understanding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008250": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-008297": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008397": {
+    "question_type": "General Understanding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008444": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008567": {
+    "question_type": "Trend and Pattern",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008605": {
+    "question_type": "Change Detection",
+    "gt": "D",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-008634": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008715": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008748": {
+    "question_type": "Causation Reasoning",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008788": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008795": {
+    "question_type": "Consequence Reasoning",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008818": {
+    "question_type": "Consequence Reasoning",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008823": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008909": {
+    "question_type": "Causation Reasoning",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-008914": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-008998": {
+    "question_type": "General Understanding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009010": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009017": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009029": {
+    "question_type": "Structural Layout",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G004329": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009074": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009087": {
+    "question_type": "General Understanding",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009108": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009111": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009120": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009132": {
+    "question_type": "General Understanding",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009148": {
+    "question_type": "Change Detection",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009208": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009210": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009279": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-009326": {
+    "question_type": "Causation Reasoning",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009414": {
+    "question_type": "General Understanding",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009467": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-009482": {
+    "question_type": "Change Detection",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-009514": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-009518": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009554": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-009620": {
+    "question_type": "Change Detection",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009666": {
+    "question_type": "Geometric Relation",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009698": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009701": {
+    "question_type": "Change Detection",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G004395": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-009757": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-009755": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009784": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009833": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-009865": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009900": {
+    "question_type": "Consequence Reasoning",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009905": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009912": {
+    "question_type": "Change Detection",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-009926": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009936": {
+    "question_type": "Geometric Relation",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-009966": {
+    "question_type": "General Understanding",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-009967": {
+    "question_type": "General Understanding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G004402": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-009994": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-010013": {
+    "question_type": "Change Detection",
+    "gt": "D",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-010062": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010077": {
+    "question_type": "Causation Reasoning",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010089": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010098": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010137": {
+    "question_type": "General Understanding",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010178": {
+    "question_type": "Causation Reasoning",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010191": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G006746": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G004684": {
+    "question_type": "Structural Layout",
+    "gt": "D",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G004691": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G004720": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G003116": {
+    "question_type": "Consequence Reasoning",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G029595": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-DJI_0061_d4_02-CHA-0000": {
+    "question_type": "Change Detection",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G029617": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-DJI_0062_d4_01-CHA-0000": {
+    "question_type": "Change Detection",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-010335": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-010347": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-010453": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010461": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010498": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010543": {
+    "question_type": "Causation Reasoning",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010549": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010559": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G029736": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-DJI_0069_d4_01-OBJ-0001": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-DJI_0071_d4_02-PER-0000": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G029872": {
+    "question_type": "Geometric Relation",
+    "gt": "C",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G029917": {
+    "question_type": "Structural Layout",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G029983": {
+    "question_type": "Consequence Reasoning",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010623": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G030055": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G030063": {
+    "question_type": "Structural Layout",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-010636": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G030193": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G030197": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G030224": {
+    "question_type": "Trend and Pattern",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G030276": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010699": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-010725": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-010729": {
+    "question_type": "Geometric Relation",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010754": {
+    "question_type": "Structural Layout",
+    "gt": "B",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G004550": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010776": {
+    "question_type": "Consequence Reasoning",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010793": {
+    "question_type": "Causation Reasoning",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010845": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010937": {
+    "question_type": "Structural Layout",
+    "gt": "C",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-010942": {
+    "question_type": "General Understanding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-010999": {
+    "question_type": "Causation Reasoning",
+    "gt": "D",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-011088": {
+    "question_type": "Change Detection",
+    "gt": "C",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-011125": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-011129": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-011149": {
+    "question_type": "Change Detection",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-011204": {
+    "question_type": "Object and Land Cover Recognition",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-011209": {
+    "question_type": "Change Detection",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-011214": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G004589": {
+    "question_type": "Trend and Pattern",
+    "gt": "C",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-011246": {
+    "question_type": "Consequence Reasoning",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G004590": {
+    "question_type": "Trend and Pattern",
+    "gt": "C",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-011316": {
+    "question_type": "General Understanding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-011349": {
+    "question_type": "Causation Reasoning",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-011363": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-011462": {
+    "question_type": "Trend and Pattern",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-011476": {
+    "question_type": "Hypothetical Reasoning",
+    "gt": "A",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-011556": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-011567": {
+    "question_type": "Causation Reasoning",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-011586": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-011729": {
+    "question_type": "Consequence Reasoning",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-011754": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-011769": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-011773": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "QA-011804": {
+    "question_type": "General Understanding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "QA-011839": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G004417": {
+    "question_type": "Trend and Pattern",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G001784": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G001089": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G001091": {
+    "question_type": "Trend and Pattern",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005913": {
+    "question_type": "Trend and Pattern",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G000282": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G001423": {
+    "question_type": "Structural Layout",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G001414": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006931": {
+    "question_type": "Trend and Pattern",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G005727": {
+    "question_type": "Structural Layout",
+    "gt": "A",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G003276": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002336": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G003294": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005154": {
+    "question_type": "Trend and Pattern",
+    "gt": "D",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G005168": {
+    "question_type": "Geometric Relation",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005300": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G004273": {
+    "question_type": "Trend and Pattern",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G004271": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G002572": {
+    "question_type": "Structural Layout",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006836": {
+    "question_type": "Structural Layout",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006360": {
+    "question_type": "Structural Layout",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G004831": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G001380": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005923": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G003245": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002407": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002418": {
+    "question_type": "Geometric Relation",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002480": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006362": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G005889": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G001809": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G000252": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G005918": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G006207": {
+    "question_type": "Trend and Pattern",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G001308": {
+    "question_type": "Trend and Pattern",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002858": {
+    "question_type": "Structural Layout",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G004059": {
+    "question_type": "Geometric Relation",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005238": {
+    "question_type": "Geometric Relation",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G003920": {
+    "question_type": "Trend and Pattern",
+    "gt": "A",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G003922": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G003887": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G006371": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G001706": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002253": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G003001": {
+    "question_type": "Trend and Pattern",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G000335": {
+    "question_type": "Trend and Pattern",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006031": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G003049": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G003050": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G003051": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005036": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006220": {
+    "question_type": "Geometric Relation",
+    "gt": "C",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G004109": {
+    "question_type": "Trend and Pattern",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002068": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G000613": {
+    "question_type": "Structural Layout",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G002487": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G006936": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G005758": {
+    "question_type": "Geometric Relation",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G004481": {
+    "question_type": "Structural Layout",
+    "gt": "A",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G001159": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G006238": {
+    "question_type": "Trend and Pattern",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G001972": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G006202": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G002819": {
+    "question_type": "Geometric Relation",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006557": {
+    "question_type": "Trend and Pattern",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G003646": {
+    "question_type": "Structural Layout",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G001793": {
+    "question_type": "Geometric Relation",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G004357": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G001522": {
+    "question_type": "Geometric Relation",
+    "gt": "B",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G005621": {
+    "question_type": "Structural Layout",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002891": {
+    "question_type": "Geometric Relation",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G000620": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G000392": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G000408": {
+    "question_type": "Structural Layout",
+    "gt": "C",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G001269": {
+    "question_type": "Temporal Grounding",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G002792": {
+    "question_type": "Structural Layout",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005373": {
+    "question_type": "Geometric Relation",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G002771": {
+    "question_type": "Geometric Relation",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G000373": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G000437": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002604": {
+    "question_type": "Geometric Relation",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002009": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005813": {
+    "question_type": "Structural Layout",
+    "gt": "A",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G003432": {
+    "question_type": "Geometric Relation",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G000363": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G003556": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G005495": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005498": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005135": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G001600": {
+    "question_type": "Geometric Relation",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G001596": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G001595": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005210": {
+    "question_type": "Trend and Pattern",
+    "gt": "C",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G002018": {
+    "question_type": "Trend and Pattern",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G001672": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002201": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002186": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005794": {
+    "question_type": "Geometric Relation",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G000557": {
+    "question_type": "Trend and Pattern",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G000687": {
+    "question_type": "Structural Layout",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G001758": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G003202": {
+    "question_type": "Trend and Pattern",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G003220": {
+    "question_type": "Structural Layout",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G003721": {
+    "question_type": "Geometric Relation",
+    "gt": "B",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G001873": {
+    "question_type": "Geometric Relation",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G001696": {
+    "question_type": "Trend and Pattern",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G000871": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005385": {
+    "question_type": "Structural Layout",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G000927": {
+    "question_type": "Trend and Pattern",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005065": {
+    "question_type": "Trend and Pattern",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006151": {
+    "question_type": "Trend and Pattern",
+    "gt": "C",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G000895": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002970": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002635": {
+    "question_type": "Geometric Relation",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006910": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002129": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006614": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G000159": {
+    "question_type": "Structural Layout",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006183": {
+    "question_type": "Temporal Grounding",
+    "gt": "D",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G006849": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006020": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G001239": {
+    "question_type": "Geometric Relation",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005438": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002041": {
+    "question_type": "Trend and Pattern",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006253": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G005893": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002338": {
+    "question_type": "Geometric Relation",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006310": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G006309": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G001923": {
+    "question_type": "Structural Layout",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G000497": {
+    "question_type": "Trend and Pattern",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G000499": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G003014": {
+    "question_type": "Trend and Pattern",
+    "gt": "C",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G006452": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G005989": {
+    "question_type": "Temporal Grounding",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G003597": {
+    "question_type": "Trend and Pattern",
+    "gt": "B",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G005429": {
+    "question_type": "Temporal Grounding",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G002226": {
+    "question_type": "Perspective and Viewpoint",
+    "gt": "B",
+    "pred": "<answer>B</answer>",
+    "pred_letter": "B",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G000654": {
+    "question_type": "Structural Layout",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G003702": {
+    "question_type": "Structural Layout",
+    "gt": "A",
+    "pred": "<answer>A</answer>",
+    "pred_letter": "A",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G020823": {
+    "question_type": "Structural Layout",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-S0304-TRE-0000": {
+    "question_type": "Trend and Pattern",
+    "gt": "D",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 0
+  },
+  "REVA-G020934": {
+    "question_type": "Structural Layout",
+    "gt": "C",
+    "pred": "<answer>C</answer>",
+    "pred_letter": "C",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G020949": {
+    "question_type": "Geometric Relation",
+    "gt": "D",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 1
+  },
+  "REVA-G020978": {
+    "question_type": "Structural Layout",
+    "gt": "C",
+    "pred": "<answer>D</answer>",
+    "pred_letter": "D",
+    "missing": false,
+    "acc": 0
+  }
+}

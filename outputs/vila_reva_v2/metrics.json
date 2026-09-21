@@ -1,0 +1,100 @@
+{
+  "num_questions": 500,
+  "num_answered": 500,
+  "num_correct": 239,
+  "accuracy": 0.478,
+  "by_category": {
+    "Causal Reasoning": {
+      "num_questions": 56,
+      "num_answered": 56,
+      "num_correct": 41,
+      "accuracy": 0.7321428571428571
+    },
+    "Factual Perception": {
+      "num_questions": 167,
+      "num_answered": 167,
+      "num_correct": 86,
+      "accuracy": 0.5149700598802395
+    },
+    "Spatial Reasoning": {
+      "num_questions": 152,
+      "num_answered": 152,
+      "num_correct": 71,
+      "accuracy": 0.46710526315789475
+    },
+    "Temporal Understanding": {
+      "num_questions": 125,
+      "num_answered": 125,
+      "num_correct": 41,
+      "accuracy": 0.328
+    }
+  },
+  "by_subcategory": {
+    "Causation Reasoning": {
+      "num_questions": 23,
+      "num_answered": 23,
+      "num_correct": 18,
+      "accuracy": 0.782608695652174
+    },
+    "Change Detection": {
+      "num_questions": 63,
+      "num_answered": 63,
+      "num_correct": 30,
+      "accuracy": 0.47619047619047616
+    },
+    "Consequence Reasoning": {
+      "num_questions": 13,
+      "num_answered": 13,
+      "num_correct": 12,
+      "accuracy": 0.9230769230769231
+    },
+    "General Understanding": {
+      "num_questions": 22,
+      "num_answered": 22,
+      "num_correct": 20,
+      "accuracy": 0.9090909090909091
+    },
+    "Geometric Relation": {
+      "num_questions": 50,
+      "num_answered": 50,
+      "num_correct": 24,
+      "accuracy": 0.48
+    },
+    "Hypothetical Reasoning": {
+      "num_questions": 20,
+      "num_answered": 20,
+      "num_correct": 11,
+      "accuracy": 0.55
+    },
+    "Object and Land Cover Recognition": {
+      "num_questions": 82,
+      "num_answered": 82,
+      "num_correct": 36,
+      "accuracy": 0.43902439024390244
+    },
+    "Perspective and Viewpoint": {
+      "num_questions": 60,
+      "num_answered": 60,
+      "num_correct": 22,
+      "accuracy": 0.36666666666666664
+    },
+    "Structural Layout": {
+      "num_questions": 42,
+      "num_answered": 42,
+      "num_correct": 25,
+      "accuracy": 0.5952380952380952
+    },
+    "Temporal Grounding": {
+      "num_questions": 80,
+      "num_answered": 80,
+      "num_correct": 22,
+      "accuracy": 0.275
+    },
+    "Trend and Pattern": {
+      "num_questions": 45,
+      "num_answered": 45,
+      "num_correct": 19,
+      "accuracy": 0.4222222222222222
+    }
+  }
+}

@@ -89,6 +89,20 @@ def set_model(model_args, model):
         model.lm_head.requires_grad = False
 
 
+def resolve_model_dtype(training_args):
+    """Hardware adaptation (student): dtype used to load the base model.
+
+    Unchanged default (MODEL_DTYPE unset): bfloat16 when --bf16 is passed, else the library default.
+    transformers refuses --bf16 on pre-Ampere GPUs, and float32 weights (about 17 GB) do not fit
+    an 11 GB card. MODEL_DTYPE=bfloat16 loads the frozen base weights in bf16 without the --bf16
+    flag; PEFT keeps the trainable LoRA weights in float32, so no mixed-precision scaler is needed.
+    """
+    name = os.environ.get("MODEL_DTYPE", "")
+    if name:
+        return getattr(torch, name)
+    return torch.bfloat16 if training_args.bf16 else None
+
+
 def train(attn_implementation="flash_attention_2"):
     global local_rank
 
@@ -105,7 +119,7 @@ def train(attn_implementation="flash_attention_2"):
             model_args.model_name_or_path,
             cache_dir=training_args.cache_dir,
             attn_implementation=attn_implementation,
-            dtype=(torch.bfloat16 if training_args.bf16 else None),
+            dtype=resolve_model_dtype(training_args),
         )
         data_args.model_type = "qwen3vl"
     elif "qwen3" in model_args.model_name_or_path.lower():
@@ -113,7 +127,7 @@ def train(attn_implementation="flash_attention_2"):
             model_args.model_name_or_path,
             cache_dir=training_args.cache_dir,
             attn_implementation=attn_implementation,
-            dtype=(torch.bfloat16 if training_args.bf16 else None),
+            dtype=resolve_model_dtype(training_args),
         )
         data_args.model_type = "qwen3vl"
     elif "qwen2.5" in model_args.model_name_or_path.lower():
@@ -121,7 +135,7 @@ def train(attn_implementation="flash_attention_2"):
             model_args.model_name_or_path,
             cache_dir=training_args.cache_dir,
             attn_implementation=attn_implementation,
-            dtype=(torch.bfloat16 if training_args.bf16 else None),
+            dtype=resolve_model_dtype(training_args),
         )
         data_args.model_type = "qwen2.5vl"
     else:
@@ -129,7 +143,7 @@ def train(attn_implementation="flash_attention_2"):
             model_args.model_name_or_path,
             cache_dir=training_args.cache_dir,
             attn_implementation=attn_implementation,
-            dtype=(torch.bfloat16 if training_args.bf16 else None),
+            dtype=resolve_model_dtype(training_args),
         )
         data_args.model_type = "qwen2vl"
 
@@ -203,4 +217,6 @@ def train(attn_implementation="flash_attention_2"):
 
 
 if __name__ == "__main__":
-    train(attn_implementation="flash_attention_2")
+    # Hardware adaptation (student): the default is unchanged; ATTN_IMPLEMENTATION=sdpa selects
+    # PyTorch's built-in attention on GPUs that cannot run FlashAttention 2.
+    train(attn_implementation=os.environ.get("ATTN_IMPLEMENTATION", "flash_attention_2"))

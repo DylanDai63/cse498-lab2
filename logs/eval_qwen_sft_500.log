@@ -1,0 +1,1352 @@
+nohup: ignoring input
+=== ReVA_V2 test Evaluation ===
+Model:      /data/users/jupyter-hed424/cse498_lab2/submission/outputs/qwen_reva_sft/checkpoint-50
+ReVA root:  /data/users/jupyter-hed424/cse498_lab2/data_reva
+ReVA json:  /data/users/jupyter-hed424/cse498_lab2/submission/data/eval_subsets/test_subset_500_seed2026.json
+GPU chunks: 2
+GPU ids:    2 3
+Max frames: 32
+Backend:    transformers
+Resume:     0
+
+--- Step 1: Preparing test set ---
+Saved 500 QA items to /data/users/jupyter-hed424/cse498_lab2/submission/reva_eval/data/rsvidqa/reva_v2_test_set.json
+
+Subcategory distribution:
+  Object and Land Cover Recognition: 82
+  Temporal Grounding: 80
+  Change Detection: 63
+  Perspective and Viewpoint: 60
+  Geometric Relation: 50
+  Trend and Pattern: 45
+  Structural Layout: 42
+  Causation Reasoning: 23
+  General Understanding: 22
+  Hypothetical Reasoning: 20
+  Consequence Reasoning: 13
+
+
+--- Step 2: Running inference ---
+[cuda:0] Loading LoRA adapter: /data/users/jupyter-hed424/cse498_lab2/submission/outputs/qwen_reva_sft/checkpoint-50
+[cuda:0] Load model and processor success!
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 237]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 279]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 204]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 229]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 259]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 211]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 215]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 241]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 220]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 269]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 281]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 253]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 260]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 207]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=2.0
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 206]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 258]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 273]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 221]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 274]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 241]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 276]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 273]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 237]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 236]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 247]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 265]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 219]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 246]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 221]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 216]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 216]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 230]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 258]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 212]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=2.0
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 233]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 220]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 241]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 222]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=2.0
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 215]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 233]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 221]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 229]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=2.0
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 229]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 220]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 224]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=2.0
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 268]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 256]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 243]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 210]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=1.7518246896478329
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 274]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 265]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 258]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 254]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=2.0
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 254]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 273]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 294]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 217]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=2.0
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 216]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 269]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 259]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 211]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=2.0
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 257]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 244]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 242]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 276]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=2.0
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 256]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 210]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 262]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 266]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=2.0
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 272]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 253]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 271]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 268]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=1.7142858122449036
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 230]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 285]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 225]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 225]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=1.7266186056622383
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 259]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 266]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 225]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 238]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=1.7266186056622383
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 268]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 245]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 230]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 252]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=1.7910448830474557
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 220]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 292]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 222]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 238]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=1.7266186056622383
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 254]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 259]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 226]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 224]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=1.8045111696534633
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 234]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 224]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 267]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 253]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=1.7647057785467188
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 232]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 261]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 208]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 233]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=1.7266186056622383
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 248]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 270]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 232]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 252]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=1.7518249198145939
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 235]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 235]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 255]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=1.7266186056622383
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 209]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 225]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 223]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 256]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=1.7391304347826084
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 278]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 211]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 249]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 249]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:0] Inference: fps_inputs=1.7777777777777777
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 204]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 201]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 221]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 206]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.7391304347826089
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 211]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 200]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 230]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 221]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.7391304347826084
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 210]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 231]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 219]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 271]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.7391304347826089
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 217]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 217]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 216]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 217]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.7647057785467188
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 277]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 247]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 234]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 204]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.7391304347826089
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 219]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 251]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 221]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 205]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.7647057785467188
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 221]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 237]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 269]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 272]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.7518249198145939
+[cuda:0] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 218]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 227]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 210]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 297]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.8274409631491049
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 199]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 250]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 217]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 227]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.7839303553589267
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 220]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 209]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 282]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 231]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.9980019980019978
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 219]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 246]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 230]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.9980019980019978
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 234]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 257]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 224]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 277]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.9980019980019978
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 253]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 232]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 256]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 240]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.9980019980019978
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 228]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 227]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 257]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 229]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.9180820713751905
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 234]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 223]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 239]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 257]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.6650016650016648
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 210]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 221]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 207]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.62000162000162
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 265]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 215]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 203]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.9980019980019978
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 210]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 301]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 256]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.9980019980019978
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 223]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 199]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 209]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.9980019980019978
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 250]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 223]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 224]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 202]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.9980019980019978
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 248]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 224]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 219]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 304]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.9335504452676642
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 218]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 275]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 279]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.9980019980019978
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 225]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 245]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 243]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 305]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.998001998001998
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 200]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 250]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 205]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 209]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.998001998001998
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 252]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 203]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 262]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 276]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.4567526334331922
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 251]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 201]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 314]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 211]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.128283467963995
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 310]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 224]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 251]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.998001998001998
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 270]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 201]), inputs.video_grid_thw=tensor([[ 1, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 211]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.998001998001998
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 312]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 276]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 259]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 202]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.998001998001998
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 269]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 216]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 306]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 236]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.998001998001998
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 217]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 201]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 203]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 222]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.998001998001998
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 205]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 269]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 201]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.998001998001998
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 240]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] In dataset, inputs.input_ids.shape=torch.Size([1, 266]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:0] Inference: fps_inputs=1.2355212355212355
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] Inference: fps_inputs=1.998001998001998
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] Inference: fps_inputs=1.875000053267047
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 1, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] Inference: fps_inputs=1.998001998001998
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] Inference: fps_inputs=1.0063388972657867
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] Inference: fps_inputs=1.8198121009884252
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] Inference: fps_inputs=1.998001998001998
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:0] Inference: fps_inputs=1.8384400602105833
+[cuda:0] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.53s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.41s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.43s/it]
+
+cuda:0:   0%|          | 0/63 [00:00<?, ?it/s]qwen-vl-utils using torchcodec to read video.
+qwen-vl-utils using torchcodec to read video.
+qwen-vl-utils using torchcodec to read video.
+qwen-vl-utils using torchcodec to read video.
+Asked to sample `fps` frames per second but no video metadata was provided which is required when sampling with `fps`. Defaulting to `fps=24`. Please provide `video_metadata` for more accurate results.
+Asked to sample `fps` frames per second but no video metadata was provided which is required when sampling with `fps`. Defaulting to `fps=24`. Please provide `video_metadata` for more accurate results.
+Asked to sample `fps` frames per second but no video metadata was provided which is required when sampling with `fps`. Defaulting to `fps=24`. Please provide `video_metadata` for more accurate results.
+Asked to sample `fps` frames per second but no video metadata was provided which is required when sampling with `fps`. Defaulting to `fps=24`. Please provide `video_metadata` for more accurate results.
+Asked to sample `fps` frames per second but no video metadata was provided which is required when sampling with `fps`. Defaulting to `fps=24`. Please provide `video_metadata` for more accurate results.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+cuda:0:   2%|▏         | 1/63 [00:21<22:27, 21.74s/it]
+cuda:0:   3%|▎         | 2/63 [00:41<20:45, 20.42s/it]
+cuda:0:   5%|▍         | 3/63 [01:01<20:08, 20.13s/it]
+cuda:0:   6%|▋         | 4/63 [01:20<19:33, 19.89s/it]
+cuda:0:   8%|▊         | 5/63 [01:46<21:22, 22.11s/it]
+cuda:0:  10%|▉         | 6/63 [02:06<20:13, 21.29s/it]
+cuda:0:  11%|█         | 7/63 [02:25<19:22, 20.77s/it]
+cuda:0:  13%|█▎        | 8/63 [02:45<18:39, 20.36s/it]
+cuda:0:  14%|█▍        | 9/63 [03:05<18:06, 20.13s/it]
+cuda:0:  16%|█▌        | 10/63 [03:31<19:23, 21.95s/it]
+cuda:0:  17%|█▋        | 11/63 [03:50<18:26, 21.27s/it]
+cuda:0:  19%|█▉        | 12/63 [04:11<17:49, 20.97s/it]
+cuda:0:  21%|██        | 13/63 [04:31<17:20, 20.80s/it]
+cuda:0:  22%|██▏       | 14/63 [04:58<18:36, 22.79s/it]
+cuda:0:  24%|██▍       | 15/63 [05:26<19:19, 24.16s/it]
+cuda:0:  25%|██▌       | 16/63 [05:46<18:00, 22.99s/it]
+cuda:0:  27%|██▋       | 17/63 [06:06<17:01, 22.21s/it]
+cuda:0:  29%|██▊       | 18/63 [06:27<16:17, 21.72s/it]
+cuda:0:  30%|███       | 19/63 [06:47<15:37, 21.30s/it]
+cuda:0:  32%|███▏      | 20/63 [07:08<15:05, 21.05s/it]
+cuda:0:  33%|███▎      | 21/63 [07:28<14:32, 20.78s/it]
+cuda:0:  35%|███▍      | 22/63 [07:50<14:32, 21.27s/it]
+cuda:0:  37%|███▋      | 23/63 [08:11<14:00, 21.02s/it]
+cuda:0:  38%|███▊      | 24/63 [08:31<13:31, 20.81s/it]
+cuda:0:  40%|███▉      | 25/63 [08:51<13:03, 20.61s/it]
+cuda:0:  41%|████▏     | 26/63 [09:12<12:39, 20.52s/it]
+cuda:0:  43%|████▎     | 27/63 [09:40<13:47, 22.98s/it]
+cuda:0:  44%|████▍     | 28/63 [10:05<13:39, 23.42s/it]
+cuda:0:  46%|████▌     | 29/63 [10:25<12:46, 22.54s/it]
+cuda:0:  48%|████▊     | 30/63 [10:46<12:05, 21.99s/it]
+cuda:0:  49%|████▉     | 31/63 [11:06<11:21, 21.29s/it]
+cuda:0:  51%|█████     | 32/63 [11:25<10:43, 20.75s/it]
+cuda:0:  52%|█████▏    | 33/63 [11:45<10:13, 20.44s/it]
+cuda:0:  54%|█████▍    | 34/63 [12:04<09:45, 20.17s/it]
+cuda:0:  56%|█████▌    | 35/63 [12:29<10:01, 21.50s/it]
+cuda:0:  57%|█████▋    | 36/63 [12:49<09:27, 21.02s/it]
+cuda:0:  59%|█████▊    | 37/63 [13:09<08:57, 20.67s/it]
+cuda:0:  60%|██████    | 38/63 [13:29<08:30, 20.43s/it]
+cuda:0:  62%|██████▏   | 39/63 [13:48<08:05, 20.24s/it]
+cuda:0:  63%|██████▎   | 40/63 [14:08<07:44, 20.18s/it]
+cuda:0:  65%|██████▌   | 41/63 [14:28<07:19, 19.97s/it]
+cuda:0:  67%|██████▋   | 42/63 [14:54<07:35, 21.69s/it]
+cuda:0:  68%|██████▊   | 43/63 [15:19<07:37, 22.86s/it]
+cuda:0:  70%|██████▉   | 44/63 [15:45<07:31, 23.75s/it]
+cuda:0:  71%|███████▏  | 45/63 [16:05<06:45, 22.53s/it]
+cuda:0:  73%|███████▎  | 46/63 [16:24<06:06, 21.56s/it]
+cuda:0:  75%|███████▍  | 47/63 [16:43<05:34, 20.93s/it]
+cuda:0:  76%|███████▌  | 48/63 [17:03<05:08, 20.54s/it]
+cuda:0:  78%|███████▊  | 49/63 [17:23<04:42, 20.21s/it]
+cuda:0:  79%|███████▉  | 50/63 [17:48<04:44, 21.87s/it]
+cuda:0:  81%|████████  | 51/63 [18:10<04:23, 21.96s/it]
+cuda:0:  83%|████████▎ | 52/63 [18:30<03:53, 21.25s/it]
+cuda:0:  84%|████████▍ | 53/63 [18:50<03:28, 20.87s/it]
+cuda:0:  86%|████████▌ | 54/63 [19:17<03:23, 22.59s/it]
+cuda:0:  87%|████████▋ | 55/63 [19:37<02:56, 22.08s/it]
+cuda:0:  89%|████████▉ | 56/63 [19:58<02:30, 21.57s/it]
+cuda:0:  90%|█████████ | 57/63 [20:19<02:08, 21.44s/it]
+cuda:0:  92%|█████████▏| 58/63 [20:38<01:43, 20.68s/it]
+cuda:0:  94%|█████████▎| 59/63 [20:58<01:22, 20.53s/it]
+cuda:0:  95%|█████████▌| 60/63 [21:18<01:01, 20.40s/it]
+cuda:0:  97%|█████████▋| 61/63 [21:38<00:40, 20.23s/it]
+cuda:0:  98%|█████████▊| 62/63 [21:58<00:20, 20.29s/it]
+cuda:0: 100%|██████████| 63/63 [22:13<00:00, 18.54s/it]
+cuda:0: 100%|██████████| 63/63 [22:13<00:00, 21.17s/it]
+
+
+[cuda:1] Loading LoRA adapter: /data/users/jupyter-hed424/cse498_lab2/submission/outputs/qwen_reva_sft/checkpoint-50
+[cuda:1] Load model and processor success!
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 242]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 212]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 217]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 259]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 236]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 251]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 229]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 224]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 222]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 199]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 269]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 220]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 236]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 258]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 293]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 253]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=2.0
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 217]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 209]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 224]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 201]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 246]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 249]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 271]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 279]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 216]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 244]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 262]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 253]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 203]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 263]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 286]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 237]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 266]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 243]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 208]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 201]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=2.0
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 222]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 276]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 215]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 236]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=2.0
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 206]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 225]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 202]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 227]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=2.0
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 224]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 216]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 272]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 226]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=2.0
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 272]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 263]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 253]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 228]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=2.0
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 255]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 263]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 255]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 215]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=1.7142855918367432
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 224]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 259]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 241]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 271]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=2.0
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 243]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 215]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 244]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 260]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=2.399999520000096
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 230]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 218]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 238]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 212]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=2.0
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 250]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 207]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 274]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 274]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=2.0
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 237]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 247]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 292]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 224]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=1.7266186056622383
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 245]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 227]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 238]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 216]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=1.7266186056622383
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 209]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 266]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 221]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 229]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=1.7266186056622383
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 279]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 264]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 210]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 267]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=1.8461537325443855
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 228]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 245]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 236]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 248]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=1.7266186056622383
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 250]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 238]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 256]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 225]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=1.7777777777777777
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 270]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 249]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 301]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 276]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=1.7518249198145939
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 216]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 262]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 260]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 222]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=1.7142858122449036
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 282]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 227]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 243]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 242]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=1.7647057785467188
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 220]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 234]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 206]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 246]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=1.7266186056622383
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 231]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 210]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 244]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 210]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=1.7266186056622383
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 269]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 280]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 232]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 235]), inputs.video_grid_thw=tensor([[ 2, 14, 14]])
+[cuda:1] Inference: fps_inputs=1.777777777777778
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 221]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 233]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 210]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 211]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.7777777777777777
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 212]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 263]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 254]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 251]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.7910448830474557
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 220]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 220]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 249]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 251]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.7391304347826089
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 242]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 226]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 213]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 205]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.7647057785467186
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 219]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 261]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 209]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 237]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.7647057785467188
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 255]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 256]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 211]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 264]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.7391304347826089
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 244]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 250]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 278]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 238]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.7518249198145939
+[cuda:1] video_grid_thw=tensor([[ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14],
+        [ 2, 14, 14]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 243]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 223]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 212]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 252]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.8274409631491049
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 221]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 219]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 241]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 255]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.9980019980019978
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 210]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 278]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 227]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 277]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.9980019980019978
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 224]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 203]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 252]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 211]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.9980019980019978
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 204]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 251]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 222]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 202]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=4.281431325306364
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 275]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 273]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 209]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 222]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.9980019980019978
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 291]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 233]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 251]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 222]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.9980019980019978
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 202]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 245]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 213]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 267]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.9980019980019978
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 201]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 236]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 231]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 294]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.62000162000162
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 269]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 272]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 199]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 217]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.9980019980019978
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 275]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 250]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 245]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 215]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.9980019980019978
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 208]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 221]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 278]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 223]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.8968374598083855
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 266]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 242]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 222]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 329]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.9980019980019978
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 228]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 227]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 268]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.9335504452676642
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 282]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 217]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 238]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 306]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.9980019980019978
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 273]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 213]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 229]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 263]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.5913291656422484
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 268]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 262]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 227]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 286]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 217]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 253]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 203]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 243]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 304]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 212]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 208]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 269]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 215]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 218]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 237]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 217]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 266]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 252]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 212]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 262]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 252]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 207]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 217]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 236]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 214]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 215]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 216]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 208]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 258]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 245]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 230]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 254]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 215]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 215]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 260]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 217]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 196]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] In dataset, inputs.input_ids.shape=torch.Size([1, 202]), inputs.video_grid_thw=tensor([[ 2, 10, 18]])
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] Inference: fps_inputs=1.875000053267047
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] Inference: fps_inputs=1.998001998001998
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+[cuda:1] Inference: fps_inputs=1.8840579710144927
+[cuda:1] video_grid_thw=tensor([[ 2, 10, 18],
+        [ 2, 10, 18]], device='cuda:0')
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.52s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.39s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.41s/it]
+
+cuda:1:   0%|          | 0/63 [00:00<?, ?it/s]qwen-vl-utils using torchcodec to read video.
+qwen-vl-utils using torchcodec to read video.
+qwen-vl-utils using torchcodec to read video.
+qwen-vl-utils using torchcodec to read video.
+Asked to sample `fps` frames per second but no video metadata was provided which is required when sampling with `fps`. Defaulting to `fps=24`. Please provide `video_metadata` for more accurate results.
+Asked to sample `fps` frames per second but no video metadata was provided which is required when sampling with `fps`. Defaulting to `fps=24`. Please provide `video_metadata` for more accurate results.
+Asked to sample `fps` frames per second but no video metadata was provided which is required when sampling with `fps`. Defaulting to `fps=24`. Please provide `video_metadata` for more accurate results.
+Asked to sample `fps` frames per second but no video metadata was provided which is required when sampling with `fps`. Defaulting to `fps=24`. Please provide `video_metadata` for more accurate results.
+Asked to sample `fps` frames per second but no video metadata was provided which is required when sampling with `fps`. Defaulting to `fps=24`. Please provide `video_metadata` for more accurate results.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+cuda:1:   2%|▏         | 1/63 [00:26<27:49, 26.92s/it]
+cuda:1:   3%|▎         | 2/63 [00:52<26:33, 26.12s/it]
+cuda:1:   5%|▍         | 3/63 [01:18<26:12, 26.21s/it]
+cuda:1:   6%|▋         | 4/63 [01:38<23:19, 23.72s/it]
+cuda:1:   8%|▊         | 5/63 [02:03<23:16, 24.07s/it]
+cuda:1:  10%|▉         | 6/63 [02:29<23:33, 24.79s/it]
+cuda:1:  11%|█         | 7/63 [02:52<22:40, 24.29s/it]
+cuda:1:  13%|█▎        | 8/63 [03:12<20:54, 22.80s/it]
+cuda:1:  14%|█▍        | 9/63 [03:32<19:49, 22.03s/it]
+cuda:1:  16%|█▌        | 10/63 [03:53<19:10, 21.70s/it]
+cuda:1:  17%|█▋        | 11/63 [04:19<19:52, 22.94s/it]
+cuda:1:  19%|█▉        | 12/63 [04:41<19:22, 22.79s/it]
+cuda:1:  21%|██        | 13/63 [05:02<18:28, 22.17s/it]
+cuda:1:  22%|██▏       | 14/63 [05:23<17:44, 21.72s/it]
+cuda:1:  24%|██▍       | 15/63 [05:48<18:08, 22.68s/it]
+cuda:1:  25%|██▌       | 16/63 [06:13<18:28, 23.58s/it]
+cuda:1:  27%|██▋       | 17/63 [06:35<17:30, 22.84s/it]
+cuda:1:  29%|██▊       | 18/63 [06:57<17:00, 22.69s/it]
+cuda:1:  30%|███       | 19/63 [07:19<16:32, 22.56s/it]
+cuda:1:  32%|███▏      | 20/63 [07:41<15:54, 22.19s/it]
+cuda:1:  33%|███▎      | 21/63 [08:02<15:27, 22.08s/it]
+cuda:1:  35%|███▍      | 22/63 [08:25<15:06, 22.12s/it]
+cuda:1:  37%|███▋      | 23/63 [08:46<14:41, 22.04s/it]
+cuda:1:  38%|███▊      | 24/63 [09:14<15:23, 23.67s/it]
+cuda:1:  40%|███▉      | 25/63 [09:36<14:38, 23.11s/it]
+cuda:1:  41%|████▏     | 26/63 [09:58<14:05, 22.85s/it]
+cuda:1:  43%|████▎     | 27/63 [10:21<13:43, 22.88s/it]
+cuda:1:  44%|████▍     | 28/63 [10:45<13:38, 23.37s/it]
+cuda:1:  46%|████▌     | 29/63 [11:08<13:06, 23.15s/it]
+cuda:1:  48%|████▊     | 30/63 [11:31<12:40, 23.06s/it]
+cuda:1:  49%|████▉     | 31/63 [11:52<12:00, 22.52s/it]
+cuda:1:  51%|█████     | 32/63 [12:15<11:37, 22.49s/it]
+cuda:1:  52%|█████▏    | 33/63 [12:36<11:08, 22.29s/it]
+cuda:1:  54%|█████▍    | 34/63 [12:58<10:41, 22.11s/it]
+cuda:1:  56%|█████▌    | 35/63 [13:19<10:12, 21.86s/it]
+cuda:1:  57%|█████▋    | 36/63 [13:41<09:48, 21.79s/it]
+cuda:1:  59%|█████▊    | 37/63 [14:03<09:25, 21.74s/it]
+cuda:1:  60%|██████    | 38/63 [14:24<09:02, 21.71s/it]
+cuda:1:  62%|██████▏   | 39/63 [14:46<08:38, 21.61s/it]
+cuda:1:  63%|██████▎   | 40/63 [15:07<08:18, 21.67s/it]
+cuda:1:  65%|██████▌   | 41/63 [15:28<07:48, 21.30s/it]
+cuda:1:  67%|██████▋   | 42/63 [15:48<07:19, 20.92s/it]
+cuda:1:  68%|██████▊   | 43/63 [16:09<07:00, 21.02s/it]
+cuda:1:  70%|██████▉   | 44/63 [16:33<06:55, 21.89s/it]
+cuda:1:  71%|███████▏  | 45/63 [16:58<06:52, 22.92s/it]
+cuda:1:  73%|███████▎  | 46/63 [17:20<06:25, 22.65s/it]
+cuda:1:  75%|███████▍  | 47/63 [17:42<05:56, 22.29s/it]
+cuda:1:  76%|███████▌  | 48/63 [18:02<05:23, 21.57s/it]
+cuda:1:  78%|███████▊  | 49/63 [18:23<04:59, 21.38s/it]
+cuda:1:  79%|███████▉  | 50/63 [18:44<04:39, 21.52s/it]
+cuda:1:  81%|████████  | 51/63 [19:06<04:17, 21.45s/it]
+cuda:1:  83%|████████▎ | 52/63 [19:27<03:53, 21.23s/it]
+cuda:1:  84%|████████▍ | 53/63 [19:47<03:31, 21.12s/it]
+cuda:1:  86%|████████▌ | 54/63 [20:13<03:21, 22.34s/it]
+cuda:1:  87%|████████▋ | 55/63 [20:33<02:54, 21.81s/it]
+cuda:1:  89%|████████▉ | 56/63 [20:53<02:29, 21.34s/it]
+cuda:1:  90%|█████████ | 57/63 [21:13<02:05, 20.97s/it]
+cuda:1:  92%|█████████▏| 58/63 [21:40<01:52, 22.60s/it]
+cuda:1:  94%|█████████▎| 59/63 [22:01<01:28, 22.02s/it]
+cuda:1:  95%|█████████▌| 60/63 [22:21<01:04, 21.49s/it]
+cuda:1:  97%|█████████▋| 61/63 [22:40<00:41, 20.95s/it]
+cuda:1:  98%|█████████▊| 62/63 [23:00<00:20, 20.59s/it]
+cuda:1: 100%|██████████| 63/63 [23:15<00:00, 18.73s/it]
+cuda:1: 100%|██████████| 63/63 [23:15<00:00, 22.15s/it]
+
+
+
+--- Step 3: Computing accuracy ---
+
+=== Results ===
+Completed: 500/500 = 100.00%
+Total: 342/500 = 68.40%
+Missing predictions: 0
+Unparsable predictions: 0
+Causation Reasoning: 21/23 = 91.30%
+Change Detection: 40/63 = 63.49%
+Consequence Reasoning: 12/13 = 92.31%
+General Understanding: 22/22 = 100.00%
+Geometric Relation: 37/50 = 74.00%
+Hypothetical Reasoning: 17/20 = 85.00%
+Object and Land Cover Recognition: 59/82 = 71.95%
+Perspective and Viewpoint: 45/60 = 75.00%
+Structural Layout: 27/42 = 64.29%
+Temporal Grounding: 36/80 = 45.00%
+Trend and Pattern: 26/45 = 57.78%
+
+Saved: /data/users/jupyter-hed424/cse498_lab2/submission/outputs/qwen_sft/qwen_sft/result.json
+Saved: /data/users/jupyter-hed424/cse498_lab2/submission/outputs/qwen_sft/qwen_sft/result.csv
+
+
+=== Done ===

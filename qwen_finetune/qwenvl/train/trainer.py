@@ -1,7 +1,13 @@
 from typing import Dict, List, Optional, Sequence, Tuple, Callable
 
 import torch
-from flash_attn.flash_attn_interface import flash_attn_varlen_func
+# Hardware adaptation (student): flash-attn needs Ampere or newer GPUs, but the course server
+# has RTX 2080 Ti (Turing, sm75). The import is optional so training can run with
+# ATTN_IMPLEMENTATION=sdpa DATA_FLATTEN=False. The packed path below still needs flash-attn.
+try:
+    from flash_attn.flash_attn_interface import flash_attn_varlen_func
+except ImportError:
+    flash_attn_varlen_func = None
 from transformers.modeling_flash_attention_utils import FlashAttentionKwargs
 from transformers import Trainer
 from transformers.cache_utils import Cache
@@ -92,6 +98,8 @@ def flash_attention_forward(
             ]
         ).item()
 
+    if flash_attn_varlen_func is None:
+        raise ImportError("data_flatten/data_packing require flash-attn; set DATA_FLATTEN=False on GPUs without it.")
     attn_output = flash_attn_varlen_func(
         query,
         key,

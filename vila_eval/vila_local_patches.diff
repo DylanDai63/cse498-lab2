@@ -1,0 +1,71 @@
+diff --git a/llava/model/multimodal_encoder/ps3_encoder.py b/llava/model/multimodal_encoder/ps3_encoder.py
+index 79d6ee5..9ed886e 100755
+--- a/llava/model/multimodal_encoder/ps3_encoder.py
++++ b/llava/model/multimodal_encoder/ps3_encoder.py
+@@ -20,9 +20,9 @@ from transformers import AutoConfig, AutoModel, PretrainedConfig
+ try:
+     from ps3 import PS3Config, PS3ImageProcessor, PS3VisionConfig, PS3VisionModel
+ except ImportError:
+-    print("PS3 is not installed. Please install it using the following command:")
+-    print("pip install ps3")
+-    raise
++    # Local patch: PS3 is an optional vision tower that VILA1.5-3b (SigLIP) never uses, and
++    # ps3-torch pins a timm version that conflicts with the rest of VILA.
++    PS3Config = PS3ImageProcessor = PS3VisionConfig = PS3VisionModel = None
+ 
+ from llava.model.multimodal_encoder.vision_encoder import VisionTower
+ 
+@@ -58,6 +58,7 @@ class PS3VisionTower(VisionTower):
+         return list(self.vision_tower.parameters())[0].device
+ 
+ 
+-AutoConfig.register("ps3", PS3Config)
+-AutoConfig.register("ps3_vision_model", PS3VisionConfig)
++if PS3Config is not None:
++    AutoConfig.register("ps3", PS3Config)
++    AutoConfig.register("ps3_vision_model", PS3VisionConfig)
+ # AutoModel.register(PS3VisionConfig, PS3VisionModel)
+diff --git a/llava/model/multimodal_encoder/siglip_encoder.py b/llava/model/multimodal_encoder/siglip_encoder.py
+index da11ae3..44bb92d 100755
+--- a/llava/model/multimodal_encoder/siglip_encoder.py
++++ b/llava/model/multimodal_encoder/siglip_encoder.py
+@@ -28,7 +28,7 @@ class SiglipVisionTower(VisionTower):
+         # TODO(ligengl): why pass config here leading to errors?
+         self.vision_tower = SiglipVisionModel.from_pretrained(
+             model_name_or_path,
+-            attn_implementation="flash_attention_2",
++            attn_implementation="sdpa",
+             torch_dtype=eval(config.model_dtype),
+         )
+         self.image_processor = SiglipImageProcessor.from_pretrained(model_name_or_path)
+@@ -40,7 +40,7 @@ class SiglipVisionTowerS2(VisionTowerS2):
+         super().__init__(model_name_or_path, config)
+         self.vision_tower = SiglipVisionModel.from_pretrained(
+             model_name_or_path,
+-            attn_implementation="flash_attention_2",
++            attn_implementation="sdpa",
+             torch_dtype=eval(config.model_dtype),
+         )
+         self.image_processor = SiglipImageProcessor.from_pretrained(model_name_or_path)
+@@ -54,7 +54,7 @@ class SiglipVisionTowerDynamicS2(VisionTowerDynamicS2):
+         super().__init__(model_name_or_path, config)
+         self.vision_tower = SiglipVisionModel.from_pretrained(
+             model_name_or_path,
+-            attn_implementation="flash_attention_2",
++            attn_implementation="sdpa",
+             torch_dtype=eval(config.model_dtype),
+         )
+         self.image_processor = SiglipImageProcessor.from_pretrained(model_name_or_path)
+diff --git a/llava/utils/media.py b/llava/utils/media.py
+index c889698..bb9db63 100644
+--- a/llava/utils/media.py
++++ b/llava/utils/media.py
+@@ -85,7 +85,7 @@ def _load_video(video_path: str, *, num_frames: int, fps: float) -> List[PIL.Ima
+ 
+ def _extract_video(video: Video, config: PretrainedConfig) -> List[PIL.Image.Image]:
+     num_frames = config.num_video_frames
+-    fps = getattr(config, "fps", 0.0)
++    fps = getattr(config, "fps", 0.0) or 0.0  # local patch: VILA1.5 configs store "fps": null
+     frames = _load_video(video.path, num_frames=num_frames, fps=fps)
+     return frames
+ 

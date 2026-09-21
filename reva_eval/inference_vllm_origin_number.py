@@ -371,7 +371,10 @@ def run_inference(args):
     args.answers_file = answers_file
 
     dataset = VideoQADataset(args, processor)
-    batch_size = 8 // args.repeat_times
+    # Hardware adaptation (student): 8 sequences of a 32-frame video plus up to 1024 generated
+    # tokens do not always fit next to the 8.3 GB model on an 11 GB GPU (eager attention), which
+    # ends in CUDA OOM. EVAL_BATCH_SIZE lowers the batch; the default (8) is the original value.
+    batch_size = int(os.environ.get("EVAL_BATCH_SIZE", "8")) // args.repeat_times
     dataloader = DataLoader(
         dataset,
         batch_size=batch_size,

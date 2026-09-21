@@ -41,11 +41,31 @@ run_name=${RUN_NAME:-"qwen_reva_sft"}
 output_dir=${OUTPUT_DIR:-"../outputs/qwen_reva_sft"}
 report_to=${REPORT_TO:-"none"}
 
+# Hardware adaptation (student): DATA_FLATTEN keeps the original default (True = packed
+# sequences through flash-attn varlen). DATA_FLATTEN=False uses the standard padded collator.
+data_flatten=${DATA_FLATTEN:-True}
+
+# Hardware adaptation (student): PRECISION selects the Trainer mixed-precision flag.
+# The original default is bf16. transformers rejects that flag on pre-Ampere GPUs, where
+# PRECISION=none MODEL_DTYPE=bfloat16 trains LoRA on a bf16 base model without AMP.
+case "${PRECISION:-bf16}" in
+    bf16) precision_flag="--bf16" ;;
+    fp16) precision_flag="--fp16" ;;
+    none) precision_flag="" ;;
+    *) echo "PRECISION must be bf16, fp16 or none" >&2; exit 2 ;;
+esac
+
+# Hardware adaptation (student): EXTRA_TRAIN_ARGS appends extra Trainer flags (empty by
+# default, so the original command line is unchanged). torchrun wraps even a single-GPU run
+# in DDP; with LoRA and reentrant gradient checkpointing that raises 'Expected to mark a
+# variable ready only once'. The run in this submission therefore passes
+# --ddp_find_unused_parameters False --gradient_checkpointing_kwargs {"use_reentrant":false}
+
 # Training arguments
 args="
     --model_name_or_path "${llm}" \
     --dataset_use ${datasets} \
-    --data_flatten True \
+    --data_flatten ${data_flatten} \
     --tune_mm_vision False \
     --tune_mm_mlp True \
     --tune_mm_llm True \
@@ -53,7 +73,7 @@ args="
     --lora_r ${LORA_R:-8} \
     --lora_alpha ${LORA_ALPHA:-16} \
     --lora_dropout ${LORA_DROPOUT:-0.0} \
-    --bf16 \
+    ${precision_flag} \
     --output_dir ${output_dir} \
     --num_train_epochs ${epochs} \
     --per_device_train_batch_size ${batch_size} \
@@ -80,7 +100,7 @@ args="
     --gradient_checkpointing True \
     --dataloader_num_workers ${dataloader_num_workers} \
     --run_name ${run_name} \
-    --report_to ${report_to}"
+    --report_to ${report_to} ${EXTRA_TRAIN_ARGS:-}"
 
 if [ "$use_deepspeed" = "1" ]; then
     args="--deepspeed ${deepspeed} ${args}"
