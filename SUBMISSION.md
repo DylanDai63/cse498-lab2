@@ -26,8 +26,8 @@ Base vs. fine-tuned on the same questions: 46 gained, 30 lost, exact McNemar p =
 | Qwen base `result.csv` | `outputs/qwen_base/qwen_base/result.csv` |
 | Qwen fine-tuned `result.csv` | `outputs/qwen_sft/qwen_sft/result.csv` |
 | VILA `metrics.json` | `outputs/vila_reva_v2/metrics.json` |
-| Analysis of three examples | `report/main.pdf`, Section 6 |
-| Commands | this file and `report/main.pdf`, Section 8 |
+| Qualitative analysis (5 cases) | `report/main.pdf`, Section 6 |
+| Commands | this file and `report/main.pdf`, Section 7 |
 
 Also included, because the report numbers and the three examples are computed from them: the
 per-question results (`result.json`, `outputs.jsonl`), the training log summary
@@ -63,7 +63,7 @@ Every switch is an environment variable. **Unset = original behaviour.**
 | `DATA_FLATTEN` | `qwen_finetune/scripts/sft_7b.sh` | `True` | `False` |
 | `PRECISION` | `qwen_finetune/scripts/sft_7b.sh` | `bf16` | `none` |
 | `MODEL_DTYPE` | `qwen_finetune/qwenvl/train/train_qwen.py` | follows `--bf16` | `bfloat16` |
-| `EXTRA_TRAIN_ARGS` | `qwen_finetune/scripts/sft_7b.sh` | empty | see the training command |
+| `EXTRA_TRAIN_ARGS` | `qwen_finetune/scripts/sft_7b.sh` | empty | see the fine-tuning command below |
 | `EVAL_BATCH_SIZE` | `reva_eval/inference_vllm_origin_number.py` | `8` | `4` |
 | `GPU_IDS` | `reva_eval/eval_reva_v2.sh` | `0 .. NUM_CHUNKS-1` | free GPUs on the shared server |
 

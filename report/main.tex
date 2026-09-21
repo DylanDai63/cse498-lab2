@@ -83,7 +83,7 @@ FlashAttention~2 does not support Turing GPUs & \path{trainer.py} imports \textt
 \addlinespace
 \texttt{ValueError: Your setup doesn't support bf16/gpu} & \path{sft_7b.sh} selects the precision flag; \path{train_qwen.py} can load the frozen base weights in bfloat16 without the flag. PEFT keeps the LoRA weights in float32 & \texttt{PRECISION=none}\newline \texttt{MODEL\_DTYPE=bfloat16} \\
 \addlinespace
-\texttt{RuntimeError: Expected to mark a variable ready only once} (LoRA with reentrant gradient checkpointing under DDP) & \path{sft_7b.sh} appends extra Trainer flags & \texttt{EXTRA\_TRAIN\_ARGS} with the two flags shown in Section~8 \\
+\texttt{RuntimeError: Expected to mark a variable ready only once} (LoRA with reentrant gradient checkpointing under DDP) & \path{sft_7b.sh} appends extra Trainer flags & \texttt{EXTRA\_TRAIN\_ARGS} with the two flags shown in Section~\ref{sec:commands} \\
 \addlinespace
 CUDA out of memory in evaluation with the hard-coded batch of 8 & \path{inference_vllm_origin_number.py} reads the batch size from a variable & \texttt{EVAL\_BATCH\_SIZE=4} \\
 \addlinespace
@@ -137,6 +137,7 @@ The five cases follow the order of two correct answers, two incorrect answers an
 \textbf{Case 5, output format error, option parsing (REVA-G001758, Temporal Grounding).} The question asks when the first vehicle appears on the bridge. The options are 0.0, 5.0, 1.5 and 3.0 seconds, and the annotation marks A, 0.0 seconds. The baseline wrote that the bridge is empty at 0.0 seconds and that the vehicle appears at 0.5 seconds. Because 0.5 seconds is not an option, the baseline alternated between A and C, repeated ``But wait'', and reached the 1024-token limit without an \texttt{<answer>} tag. My scorer returns no letter for such an output, because choosing A or C from the text would be a guess, and the question counts as incorrect. The fine-tuned model answered \texttt{<answer>A</answer>}, which is correct, and VILA answered D. Four of the five unparsable baseline outputs are Temporal Grounding questions that end at the token limit in the same way. The fifth (QA-009967) is a visual perception failure. The baseline did not see the small body of water in the video and answered ``None of the above'', which is not among the options.
 
 \section{Commands}
+\label{sec:commands}
 
 The repository README lists every command in order. The three evaluation runs and the training run were:
 
