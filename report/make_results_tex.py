@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 import statistics
 from collections import Counter
 from pathlib import Path
@@ -55,6 +56,26 @@ for tag, letters in (
 ):
     for letter in "ABCD":
         macros[f"Let{tag}{letter}"] = str(letters.get(letter, 0))
+
+macros["AllRight"] = str(sum(1 for k in base if base[k]["acc"] and sft[k]["acc"] and vila_by_id[k]["is_correct"]))
+macros["AllWrong"] = str(sum(1 for k in base if not base[k]["acc"] and not sft[k]["acc"] and not vila_by_id[k]["is_correct"]))
+
+# Timestamp check on Temporal Grounding: times that the baseline states in its own reasoning and
+# that are not option values. The inference script labels the frames 0.2 s and 1.1 s (see the report),
+# so a baseline that reasons on those labels only mentions times of at most 1.4 s.
+gt_file = ROOT / "reva_eval/data/rsvidqa/reva_v2_test_set.json"
+questions = {g["id"]: g["question"] for g in json.loads(gt_file.read_text(encoding="utf-8"))}
+tg = [k for k in base if base[k]["question_type"] == "Temporal Grounding"]
+short = []
+for k in tg:
+    reasoning = base[k]["pred"].split("<answer>")[0]
+    stated = [float(x) for x in re.findall(r"(?<![\d.])(\d+\.\d+)\s*(?:s\b|seconds?)", reasoning)]
+    option_values = {float(x) for x in re.findall(r"(\d+\.\d+)", questions.get(k, ""))}
+    own = [t for t in stated if t not in option_values]
+    if own and max(own) <= 1.4:
+        short.append(k)
+macros.update({"TGTotal": str(len(tg)), "TGShortTime": str(len(short)),
+               "TGShortTimeCorrect": str(sum(base[k]["acc"] for k in short))})
 
 # Training curve: the Hugging Face Trainer stores one log entry per optimizer step.
 history = json.loads((ROOT / "outputs/qwen_reva_sft/trainer_state.json").read_text(encoding="utf-8"))["log_history"]
